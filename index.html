@@ -107,7 +107,7 @@ body {
 </div>
 <p></p>
 <script>
-  function beans() {
+ 
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
             localStorage.beans = Number(localStorage.beans)+0;
@@ -115,7 +115,7 @@ body {
             localStorage.beans = 1;
         }
    
-    }
+    
       function getBeans(beans) {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
@@ -142,7 +142,7 @@ alert("Bug reporter has a bug and cannot be used right now. Please report this b
     <center><h1>CoffeeMedia</h1> </center>
     <p>Your favorite social network is back. In a brand spankin' new style! All new look, improved quality and functions, things just can't get any better! But wait, there's more! Are you tired of that glitchy Html comment box? Well it is gone!</p>
 <div class="alert alert-success">
-  <strong class="fa fa-coffee" id="5" onload="beans()"></strong> CoffeeBeans
+    <strong class="fa fa-coffee"></strong><p id="5"></p>
 </div>
   </div>
 <div class="container">
