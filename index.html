@@ -122,6 +122,7 @@ body {
             localStorage.beans = Number(localStorage.beans)+beans;
         } else {
             localStorage.beans = 1;
+            document.getElementById("5").innerHTML = localStorage.beans;
         }
         
     } else {
@@ -134,7 +135,7 @@ alert("Bug reporter has a bug and cannot be used right now. Please report this b
 }   
 document.getElementById("5").innerHTML = localStorage.beans;
 
-    window.setTimeout(getBeans, 300000);
+    window.setTimeout(getBeans(5), 300000);
 </script>
 <div class="container">
   <div class="jumbotron">
@@ -161,7 +162,7 @@ function closeNav() {
 }
 </script>
 <body>
-
+<button type="button" class="btn btn-success" onclick=getBeans(1)>Get Beans</button>
 
 </body>
 </html>
