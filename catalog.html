@@ -1,4 +1,8 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {
   box-sizing: border-box;
@@ -6,7 +10,7 @@
 
 #myInput {
   background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
@@ -15,45 +19,67 @@
   margin-bottom: 12px;
 }
 
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
 }
 
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
 }
 </style>
 </head>
 <body>
 
-<h2>CATALOG</h2>
+<h2>My Customers</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
-<ul id="myUL">
-  <li><a href="/beta/mod.html">MOD Rank</a></li>
-  <li><a href="/beta/program.html">Programmer Rank</a></li>
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Price</th>
+  </tr>
+  <tr>
+    <td>Programmer Rank</td>
+    <td class="fa fa-coffee">100</td>
+  </tr>
+  <tr>
+    <td>CoffeeCup</td>
+    <td class="fa fa-coffee">5</td>
+  </tr>
 
-</ul>
+</table>
 
 <script>
+//fa fa-coffee
 function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-
-        }
-    }
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
 }
 </script>
 
