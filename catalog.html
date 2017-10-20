@@ -172,6 +172,23 @@ function myFunction() {
     }       
   }
 }
+   function getBeans(beans) {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans)+beans;
+        } else {
+            localStorage.beans = 1;
+        }
+        
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+    }
+  
+document.getElementById("5").innerHTML = localStorage.beans;
+
+    window.setTimeout(getBeans, 300000);
 </script>
 
 </body>
