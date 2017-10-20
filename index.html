@@ -121,7 +121,7 @@ body {
       function getBeans(beans) {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
-            localStorage.beans = Number(localStorage.beans)+beans;
+            localStorage.beans = Number(localStorage.beans)+ beans;
         } else {
             localStorage.beans = 1;
             document.getElementById("5").innerHTML = localStorage.beans;
