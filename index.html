@@ -111,8 +111,10 @@ body {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
             localStorage.beans = Number(localStorage.beans)+0;
+            document.getElementById("5").innerHTML = localStorage.beans;
         } else {
             localStorage.beans = 1;
+            document.getElementById("5").innerHTML = localStorage.beans;
         }
    
     
@@ -133,7 +135,7 @@ body {
 function bug() {
 alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
 }   
-document.getElementById("5").innerHTML = localStorage.beans;
+
 
     window.setTimeout(getBeans(5), 300000);
 </script>
