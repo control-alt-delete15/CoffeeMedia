@@ -45,3 +45,111 @@ body {
 .sidenav a:hover {
     color: #f1f1f1;
 }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<style>
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.active {
+    background-color: #4CAF50; /* 	fa fa-address-bookAdd an active/current color */
+
+}
+}
+</style>
+<body>
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a> 
+  <a href="#" onclick="openNav()"><i class="fa fa-search" ></i></a> 
+  <a href="#"><i class="fa fa-envelope"></i></a> 
+  <a href="https://github.com/"><i class="fa fa-github" ></i></a>
+  <a href="#"  onclick="bug()"><i class="fa fa-bug"></i></a> 
+  <a href="#"  onclick=""><i class="fa fa-cart-arrow-down"></i></a>
+  <a href="#"  onclick=""><i class="fa fa-address-book"></i></a>
+</div>
+<p></p>
+<script>
+function bug() {
+alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
+}
+</script>
+<div class="container">
+  <div class="jumbotron">
+    <center><h1>CoffeeMedia</h1> </center>
+    <p>Your favorite social network is back. In a brand spankin' new style! All new look, improved quality and functions, things just can't get any better! But wait, there's more! Are you tired of that glitchy Html comment box? Well it is gone!</p>
+    
+  </div>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<body>
+
+<div class="container">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+  
+</div>
+</body>
+</html>
