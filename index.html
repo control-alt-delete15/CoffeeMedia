@@ -154,7 +154,32 @@ alert("Bug reporter has a bug and cannot be used right now. Please report this b
        <center><h1 class="fa fa-coffee">CoffeeBeans and CoffeeCups</h1> </center>
     <p>CoffeeBeans are the online currency used at CoffeeMedia. You can use them to buy numerous items from our shop. They are earned by spending time on CoffeeMedia, and saved to each computer. You earn 5 CoffeeBeans for every 5 minutes on CoffeeMedia. CoffeeCups are used to buy other, special things.</p> 
   </div>
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
 
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+  </body>
+</html>
 <script>
 
 function openNav() {
