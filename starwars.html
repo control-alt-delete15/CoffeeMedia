@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>CoffeeMedia</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+ 
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<style>
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+.active {
+    background-color: #4CAF50; /* 	fa fa-address-bookAdd an active/current color */
+}
+}
+</style>
+<body>
+<div class="icon-bar">
+ <a href="/index.html"><i class="fa fa-home"></i></a> 
+   <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+  <a href="/text.html"  class="active"><i class="glyphicon glyphicon-comment"></i></a> 
+  <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a>
+  <a href="" onclick="bug()"><i class="fa fa-bug"></i></a>
+   <a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a>
+    <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a>
+</div>
+ <script>  function getBeans(beans) {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans)+beans;
+        } else {
+            localStorage.beans = 1;
+        }
+        
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+    }
+  
+document.getElementById("5").innerHTML = localStorage.beans;
+    window.setTimeout(getBeans, 300000);</script>
+<body>
+ <h4>Coffee Media Star Wars chat</h4>
+ <p>For avatar images, please create a Gravatar account, as this site depends on it for avatar images.</p>
+ <a href="https://en.gravatar.com/">https://en.gravatar.com/</a>
+ <p><a style="font-size:48px" href="https://accounts.google.com/o/oauth2/auth?scope=email&amp;state=https%3A//coffee-media.github.io/beta/text.html&amp;redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&amp;response_type=code&amp;client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&amp;approval_prompt=force" class="fa fa-user-plus"></a></p>
+<a style="font-size:48px" href="//www.htmlcommentbox.com/logout?then=https://coffee-media.github.io/beta/text.html" class="fa fa-user-secret"></a>
+
+ </body>
