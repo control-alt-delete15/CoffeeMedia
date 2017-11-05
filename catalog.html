@@ -171,12 +171,15 @@ function buyBean(price) {
         } else {
             alert("You connat afford this");
         }
-    }
+    
 }
 
 
 
 </script>
+  <div class="alert alert-success">
+    <strong class="fa fa-coffee"></strong><p id="result">Loading...</p>
+</div>
 <div class="container">
   <h2>CoffeeShop</h2>
   <p>Welcome to the CoffeShop! Here you can spend all the CoffeeBeans you want.</p>  
@@ -207,7 +210,7 @@ function buyBean(price) {
         <td>CoffeePot</td>
         <td>003</td>
         <td><span class="fa fa-coffee"></span> 150</td>
-         <td onclick=buyBean(150)>Buy</td>
+          <td onclick=buyBean(500) class="btn btn-info">Buy</td>
       </tr>
     </tbody>
   </table>
