@@ -121,7 +121,7 @@ body {
 }
 }
 </style>
-<body>
+<body onload="bean()">
 <div class="icon-bar">
  <div class="icon-bar">
   <a href="/index.html"><i class="fa fa-home"></i></a> 
@@ -198,19 +198,19 @@ function buyBean(price) {
         <td>CoffeeCup</td>
         <td>001</td>
         <td><span class="fa fa-coffee"></span> 10</td>
-        <td onclick=buyBean(10) class="btn btn-info">Buy</td>
+        <td onclick="buyBean(10)" class="btn btn-info">Buy</td>
       </tr>
       <tr>
         <td>Barista</td>
         <td>002</td>
         <td><span class="fa fa-coffee"></span> 500</td>
-        <td onclick=buyBean(500) class="btn btn-info">Buy</td>
+        <td onclick="buyBean(500)" class="btn btn-info">Buy</td>
       </tr>
        <tr>
         <td>CoffeePot</td>
         <td>003</td>
         <td><span class="fa fa-coffee"></span> 150</td>
-          <td onclick=buyBean(500) class="btn btn-info">Buy</td>
+          <td onclick="buyBean(150)" class="btn btn-info">Buy</td>
       </tr>
     </tbody>
   </table>
