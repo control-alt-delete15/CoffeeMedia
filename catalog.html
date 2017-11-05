@@ -164,14 +164,12 @@ function getBean() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-function buyBean(price, itemId) {
+function buyBean(price,) {
    
         if (localStorage.beans > price) {
             localStorage.beans = localStorage.beans - price;
-          bean();
-          if (itemId = 002) {
-            document.getElementById("itemresult").innerHTML = "<div class="alert alert-success">You are now a Barista!</div>";
-              }
+            bean();
+         
         } else {
             alert("You cannot afford this");
         }
@@ -203,19 +201,19 @@ function buyBean(price, itemId) {
         <td>CoffeeCup</td>
         <td>001</td>
         <td><span class="fa fa-coffee"></span> 10</td>
-        <td onclick="buyBean(10, 001)" class="btn btn-info">Buy</td>
+        <td onclick="buyBean(10)" class="btn btn-info">Buy</td>
       </tr>
       <tr>
         <td>Barista</td>
         <td>002</td>
         <td><span class="fa fa-coffee"></span> 500</td>
-        <td onclick="buyBean(500, 002)" class="btn btn-info">Buy</td>
+        <td onclick="buyBean(500)" class="btn btn-info">Buy</td>
       </tr>
        <tr>
         <td>CoffeePot</td>
         <td>003</td>
         <td><span class="fa fa-coffee"></span> 150</td>
-          <td onclick="buyBean(150, 003)" class="btn btn-info">Buy</td>
+          <td onclick="buyBean(150)" class="btn btn-info">Buy</td>
       </tr>
     </tbody>
   </table>
