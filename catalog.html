@@ -168,6 +168,7 @@ function buyBean(price) {
    
         if (localStorage.beans > price) {
             localStorage.beans = localStorage.beans - price;
+          bean();
         } else {
             alert("You cannot afford this");
         }
