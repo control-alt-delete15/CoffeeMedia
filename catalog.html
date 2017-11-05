@@ -167,9 +167,9 @@ function getBean() {
 function buyBean(price) {
    
         if (localStorage.beans > price) {
-            localStorage.beans = Number(localStorage.beans) - price;
+            localStorage.beans = localStorage.beans - price;
         } else {
-            alert("You connat afford this");
+            alert("You cannot afford this");
         }
     
 }
