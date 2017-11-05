@@ -164,11 +164,14 @@ function getBean() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-function buyBean(price) {
+function buyBean(price, itemId) {
    
         if (localStorage.beans > price) {
             localStorage.beans = localStorage.beans - price;
           bean();
+          if (itemId = 002) {
+            document.getElementById("itemresult").innerHTML = "<div class="alert alert-success">You are now a Barista!</div>"
+              }
         } else {
             alert("You cannot afford this");
         }
@@ -181,6 +184,7 @@ function buyBean(price) {
   <div class="alert alert-success">
     <strong class="fa fa-coffee"></strong><p id="result">Loading...</p>
 </div>
+  <span id=itemresult></span
 <div class="container">
   <h2>CoffeeShop</h2>
   <p>Welcome to the CoffeShop! Here you can spend all the CoffeeBeans you want.</p>  
