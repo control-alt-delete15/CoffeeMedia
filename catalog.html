@@ -134,62 +134,95 @@ body {
    <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a>  
 </div>
   </div>
-<h2>My Customers</h2>
+  <script>
+ 
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
-<table id="myTable">
-  <tr class="header">
-    <th style="width:60%;">Name</th>
-    <th style="width:40%;">Price</th>
-  </tr>
-  <tr>
-    <td>Programmer Rank</td>
-    <td class="fa fa-coffee">100</td>
-  </tr>
-  <tr>
-    <td>CoffeeCup</td>
-    <td class="fa fa-coffee">5</td>
-  </tr>
-
-</table>
-
-<script>
-//fa fa-coffee
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-   function getBeans(beans) {
+function bug() {
+alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
+}   
+function bean() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
-            localStorage.beans = Number(localStorage.beans)+beans;
+            localStorage.beans = Number(localStorage.beans);
         } else {
             localStorage.beans = 1;
         }
-        
+        document.getElementById("result").innerHTML = localStorage.beans;
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+function getBean() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans) + 1;
+        } else {
+            localStorage.beans = 1;
+        }
+        document.getElementById("result").innerHTML = localStorage.beans;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
-  
-document.getElementById("5").innerHTML = localStorage.beans;
+}
+function buyBean(price) {
+   
+        if (localStorage.beans > price) {
+            localStorage.beans = Number(localStorage.beans) - price;
+        } else {
+            alert("You connat afford this");
+        }
+    }
+}
 
-    window.setTimeout(getBeans, 300000);
+
+
+</script>
+<div class="container">
+  <h2>CoffeeShop</h2>
+  <p>Welcome to the CoffeShop! Here you can spend all the CoffeeBeans you want.</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>CoffeeCup</td>
+        <td>001</td>
+        <td><span class="fa fa-coffee"></span> 10</td>
+        <td onclick=buyBean(10) class="btn btn-info">Buy</td>
+      </tr>
+      <tr>
+        <td>Barista</td>
+        <td>002</td>
+        <td><span class="fa fa-coffee"></span> 500</td>
+        <td onclick=buyBean(500) class="btn btn-info">Buy</td>
+      </tr>
+       <tr>
+        <td>CoffeePot</td>
+        <td>003</td>
+        <td><span class="fa fa-coffee"></span> 150</td>
+         <td onclick=buyBean(150)>Buy</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 </script>
 
 </body>
