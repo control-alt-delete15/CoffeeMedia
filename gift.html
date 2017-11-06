@@ -110,42 +110,14 @@ body {
 </div>
 <p></p>
 <script>
- 
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.beans) {
-            localStorage.beans = Number(localStorage.beans)+0;
-        } else {
-            localStorage.beans = 1;
-        }
-   
-    
-      function getBeans(beans) {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.beans) {
-            localStorage.beans = Number(localStorage.beans)+beans;
-        } else {
-            localStorage.beans = 1;
-        }
-        
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-    }
-function bug() {
-alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
-}   
-document.getElementById("5").innerHTML = localStorage.beans;
-
-    window.setTimeout(getBeans, 300000);
 </script>
     <div class="container">
   <div class="jumbotron">
     <h1>Gift codes</h1> 
     <p>If you're lucky enough to receive one of our special gift codes enter it below for free CoffeeBeans</p>
        <div class="input-group">
-    <span class="input-group-addon"><i class="fa fa-key"></i></span>
-    <input id="password" type="password" class="form-control" name="" placeholder="Code">
+ <button onclick="getBean()" class="btn btn-success btn-block">Get CoffeeBeans</button>
+    <p></p>
                              
   </div>
   </div>
