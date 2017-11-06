@@ -107,7 +107,7 @@ body {
 <a style="font-size:48px" href="//www.htmlcommentbox.com/logout?then=https://coffee-media.github.io/beta/text.html" class="fa fa-user-secret"></a>
  
   
- <!-- customize labels of htmlcommentbox.com -->
+   <!-- customize labels of htmlcommentbox.com -->
 <script>
 // This code goes ABOVE the main HTML Comment Box code!
 // replace the text in the single quotes below to customize labels.
@@ -144,7 +144,6 @@ hcb_user = {
     hours_ago:'hours ago',
     minutes_ago:'minutes ago',
     within_the_last_minute:'within the last minute',
-
     msg_thankyou:'Thank you for posting!',
     msg_approval:'(this post is not published until approved)',
     msg_approval_required:'Your post will appear once approved by a moderator, you were not logged in.',
@@ -154,16 +153,14 @@ hcb_user = {
     err_too_frequent:'You must wait a few seconds before posting again.',
     err_comment_empty:'Your post was not posted because it was empty!',
     err_denied:'Your post was not accepted.',
-
     //SETTINGS
     MAX_CHARS: 8192,
     PAGE:'', // ID of the webpage to show comments for. defaults to the webpage the user is currently visiting.
-    ON_COMMENT: document.getElementById('hcb_form_name').disabled = true;, // Function to call after commenting.
+    ON_COMMENT: disable() { document.getElementById('hcb_form_name').disabled = true;}, // Function to call after commenting.
     RELATIVE_DATES:true // show dates in the form "X hours ago." etc.
 };
 </script>
 <!-- done customizing labels of htmlcommentbox.com --> 
-  
   
   
   <!-- begin wwww.htmlcommentbox.com -->
