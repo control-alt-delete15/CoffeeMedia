@@ -110,7 +110,22 @@ body {
 <p></p>
 <script>
  
-
+ function rank() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.rank) {
+            
+            localStorage.rank = localStorage.rank;
+        } 
+        else {
+            localStorage.rank = "HomeBrewer";
+        }
+        document.getElementById("rank").innerHTML = localStorage.rank;
+}
+}
+function rankUp(update){
+localStorage.rank = update;
+document.getElementById("rank").innerHTML = localStorage.rank;
+}
 function bug() {
 alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
 }   
@@ -118,12 +133,16 @@ function bean() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
             localStorage.beans = Number(localStorage.beans);
+            rank();
         } else {
             localStorage.beans = 1;
+            rank();
         }
         document.getElementById("result").innerHTML = localStorage.beans;
+        rank();
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        rank();
     }
 }
 function getBean() {
@@ -161,6 +180,9 @@ function buyBean(price) {
     <p>Your favorite social network is back. In a brand spankin' new style! All new look, improved quality and functions, things just can't get any better! But wait, there's more! Are you tired of that glitchy Html comment box? Well it is gone!</p>
 <div class="alert alert-success">
     <strong class="fa fa-coffee"></strong><p id="result">Loading...</p>
+</div>
+      <div class="alert alert-success">
+    <strong id="rank">Rank</strong><p id="result">Loading...</p>
 </div>
   </div>
 <div class="container">
