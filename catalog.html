@@ -160,12 +160,16 @@ function bean() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
             localStorage.beans = Number(localStorage.beans);
+            rank();
         } else {
             localStorage.beans = 1;
+            rank();
         }
         document.getElementById("result").innerHTML = localStorage.beans;
+        rank();
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        rank();
     }
 }
 function getBean() {
@@ -180,7 +184,7 @@ function getBean() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
  
     }
-  rank();
+ 
 }
 function buyBean(price) {
   
