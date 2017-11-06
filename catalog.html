@@ -191,13 +191,14 @@ function buyBean(price) {
         if (localStorage.beans > price) {
             localStorage.beans = localStorage.beans - price;
             bean();
-        
+            if (price == 500) { rankUp("Barista"); }
+            if (price == 10000) { rankUp("VIP"); }
+            if (price == 15000) { rankUp("Programmer"); }
+            if (price == 50) { rankUp("CoffeeDrinker"); }        
         } else {
             alert("You cannot afford this");
         }
-      if (price == 500) { rankUp("Barista"); }
-      if (price == 10000) { rankUp("VIP"); }
-      if (price == 15000) { rankUp("Programmer"); }
+
 }
 
    
@@ -253,6 +254,12 @@ function buyBean(price) {
         <td>005</td>
         <td><span class="fa fa-coffee"></span> 15,000</td>
           <td onclick="buyBean(15000)" class="btn btn-info">Buy</td>
+      </tr>
+              <tr>
+        <td>CoffeeDrinker</td>
+        <td>006</td>
+        <td><span class="fa fa-coffee"></span> 50</td>
+          <td onclick="buyBean(50)" class="btn btn-info">Buy</td>
       </tr>
     </tbody>
   </table>
