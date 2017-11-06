@@ -116,7 +116,7 @@ body {
     <h1>Gift codes</h1> 
     <p>If you're lucky enough to receive one of our special gift codes enter it below for free CoffeeBeans</p>
        <div class="input-group">
- <button onclick="inputCode('BlackCoffee11/2017')" class="btn btn-success btn-block">Get CoffeeBeans</button>
+ <button onclick="inputCode('Beans4Free', 'Jackpot', 'LuckyPplRCoffeeDrinker')" class="btn btn-success btn-block">Get CoffeeBeans</button>
     <p></p>
        <div class="alert alert-success">
     <strong class="fa fa-coffee"></strong><p id="result">Loading...</p>
@@ -193,14 +193,27 @@ function getBean() {
 
 
 
-function inputCode(codeAttempt) {
+function inputCode(codeAttempt1, codeAttempt2, codeAttempt3) {
        var code = prompt("Please enter code:", "");
-    if (code == codeAttempt) {
+    if (code == codeAttempt1) {
       getBean(500);
         document.getElementById("script").innerHTML = code + " was correct";
     } else {
        document.getElementById("script").innerHTML = code + " was incorrect";
     }
+       if (code == codeAttempt2) {
+      getBean(5000);
+        document.getElementById("script").innerHTML = code + " was correct";
+    } else {
+       document.getElementById("script").innerHTML = code + " was incorrect";
+    }
+      if (code == codeAttempt3) {
+      getBean(10);
+        document.getElementById("script").innerHTML = code + " was correct";
+    } else {
+       document.getElementById("script").innerHTML = code + " was incorrect";
+    }
+   
    
 }
 
