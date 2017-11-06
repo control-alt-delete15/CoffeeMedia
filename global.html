@@ -132,7 +132,7 @@ hcb_user = {
     email_label:'email',
     anonymous:'Anonymous',
     mod_label:'(mod)',
-    subscribe:'email me replies',
+    subscribe:'subscribe',
     are_you_sure:'Do you want to flag this comment as inappropriate?',
     
     reply:'<img src="//www.htmlcommentbox.com/static/images/reply.png"/> reply',
@@ -158,7 +158,7 @@ hcb_user = {
     //SETTINGS
     MAX_CHARS: 8192,
     PAGE:'', // ID of the webpage to show comments for. defaults to the webpage the user is currently visiting.
-    ON_COMMENT: function(){}, // Function to call after commenting.
+    ON_COMMENT: document.getElementById('hcb_form_name').disabled = true;, // Function to call after commenting.
     RELATIVE_DATES:true // show dates in the form "X hours ago." etc.
 };
 </script>
