@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html onload="rank()">
+<html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Latest compiled and minified CSS -->
@@ -178,7 +178,9 @@ function getBean() {
         document.getElementById("result").innerHTML = localStorage.beans;
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+ 
     }
+  rank();
 }
 function buyBean(price) {
   
