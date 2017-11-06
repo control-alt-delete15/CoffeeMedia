@@ -119,7 +119,64 @@ document.getElementById("5").innerHTML = localStorage.beans;
  <a href="https://en.gravatar.com/">https://en.gravatar.com/</a>
  <p><a style="font-size:48px" href="https://accounts.google.com/o/oauth2/auth?scope=email&amp;state=https%3A//coffee-media.github.io/beta/text.html&amp;redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&amp;response_type=code&amp;client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&amp;approval_prompt=force" class="fa fa-user-plus"></a></p>
 <a style="font-size:48px" href="//www.htmlcommentbox.com/logout?then=https://coffee-media.github.io/beta/text.html" class="fa fa-user-secret"></a>
-<!-- begin wwww.htmlcommentbox.com -->
+
+  <!-- customize labels of htmlcommentbox.com -->
+<script>
+// This code goes ABOVE the main HTML Comment Box code!
+// replace the text in the single quotes below to customize labels.
+hcb_user = {
+    // L10N
+    comments_header : 'Global Chat',
+    name_label : 'Name', disabled,
+    content_label: 'Enter your Post here',
+    submit : 'Post',
+    logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
+    admin_link : '<img src="//www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon"/>',
+    no_comments_msg: 'No one has commented yet. Be the first!',
+    add:'Post',
+    again: 'Post again',
+    rss:'<img src="//www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
+    said:'said:',
+    prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+    next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+    showing:'Showing',
+    to:'to',
+    website_label:'website (optional)',
+    email_label:'email',
+    anonymous:'Anonymous',
+    mod_label:'(mod)',
+    subscribe:'Subscribe',
+    are_you_sure:'Do you want to flag this comment as inappropriate?',
+    
+    reply:'<span class="glyphicon glyphicon-retweet"></span> reply',
+    flag:'<img src="//www.htmlcommentbox.com/static/images/flag.png"/> flag',
+    like:'<span class="glyphicon glyphicon-thumbs-up"></span> like',
+    
+    //dates
+    days_ago:'days ago',
+    hours_ago:'hours ago',
+    minutes_ago:'minutes ago',
+    within_the_last_minute:'within the last minute',
+    msg_thankyou:'Thank you for posting!',
+    msg_approval:'(this post is not published until approved)',
+    msg_approval_required:'Your post will appear once approved by a moderator, you were not logged in.',
+    
+    err_bad_html:'Your comment contained bad html.',
+    err_bad_email:'Please enter a valid email address.',
+    err_too_frequent:'You must wait a few seconds before posting again.',
+    err_comment_empty:'Your post was not posted because it was empty!',
+    err_denied:'Your post was not accepted.',
+    //SETTINGS
+    MAX_CHARS: 8192,
+    PAGE:'', // ID of the webpage to show comments for. defaults to the webpage the user is currently visiting.
+    ON_COMMENT: disable() { document.getElementById('hcb_form_name').disabled = true;}, // Function to call after commenting.
+    RELATIVE_DATES:true // show dates in the form "X hours ago." etc.
+};
+</script>
+<!-- done customizing labels of htmlcommentbox.com --> 
+  
+ 
+ <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=17374&num=10&ts=1509129533000");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
