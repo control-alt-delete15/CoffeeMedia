@@ -170,7 +170,10 @@ function buyBean(price) {
     }
 }
 
-
+function removeAllBeans() {
+    localStorage.beans = 0;
+    
+    }
 
 </script>
 <img scr="https://image.freepik.com/free-vector/coffee-cup-icon_23-2147511225.jpg">   
@@ -204,7 +207,7 @@ function closeNav() {
 </script>
  <button onclick="getBean()" class="btn btn-success btn-block">Get CoffeeBeans</button>
     <p></p>
- <button onclick="localStorage.beans = 0" class="btn btn-danger btn-block">Remove all CoffeeBeans</button>
+ <button onclick="removeAllBeans()" class="btn btn-danger btn-block">Remove all CoffeeBeans</button>
     <p></p>
 
 </body>
