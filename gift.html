@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
+<body onload="bean()">
 
 <style>
 body {
@@ -116,9 +116,15 @@ body {
     <h1>Gift codes</h1> 
     <p>If you're lucky enough to receive one of our special gift codes enter it below for free CoffeeBeans</p>
        <div class="input-group">
- <button onclick="getBean()" class="btn btn-success btn-block">Get CoffeeBeans</button>
+ <button onclick="inputCode(WeAreAwesome2017)" class="btn btn-success btn-block">Get CoffeeBeans</button>
     <p></p>
-                             
+       <div class="alert alert-success">
+    <strong class="fa fa-coffee"></strong><p id="result">Loading...</p>
+         <div class="alert alert-success">
+    <strong>Rank</strong><p id="rank">Loading...</p>
+           <p></p>    
+</div>
+</div>                      
   </div>
   </div>
 
@@ -126,12 +132,76 @@ body {
  
 
 <script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+
+ function rank() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.rank) {
+            
+            localStorage.rank = localStorage.rank;
+        } 
+        else {
+            localStorage.rank = "HomeBrewer";
+        }
+        document.getElementById("rank").innerHTML = localStorage.rank;
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+}
+function rankUp(update){
+localStorage.rank = update;
+document.getElementById("rank").innerHTML = localStorage.rank;
+}
+
+function bug() {
+alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
+}   
+function bean() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans);
+            rank();
+        } else {
+            localStorage.beans = 1;
+            rank();
+        }
+        document.getElementById("result").innerHTML = localStorage.beans;
+        rank();
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        rank();
+    }
+}
+function getBean() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans) + 1;
+        } else {
+            localStorage.beans = 1;
+        }
+        document.getElementById("result").innerHTML = localStorage.beans;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+ 
+    }
+ 
+}
+
+
+   
+
+
+
+function inputCode(codeAttempt) {
+       var code = prompt("Please enter code:", "");
+    if (code == codeAttempt) {
+      getBean(500);
+        document.getElementById("script").innerHTML = code + " was correct";
+    } else {
+       document.getElementById("script").innerHTML = code + " was incorrect";
+    }
+   
+}
+
+
 }
 </script>
 <body>
