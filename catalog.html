@@ -196,6 +196,7 @@ function buyBean(price) {
             alert("You cannot afford this");
         }
       if (price == 500) { rankUp("Barista"); }
+      if (price == 10000) { rankUp("VIP"); }
 }
 
    
@@ -239,6 +240,12 @@ function buyBean(price) {
         <td>003</td>
         <td><span class="fa fa-coffee"></span> 150</td>
           <td onclick="buyBean(150)" class="btn btn-info">Buy</td>
+      </tr>
+      <tr>
+        <td>VIP</td>
+        <td>004</td>
+        <td><span class="fa fa-coffee"></span> 10,000</td>
+          <td onclick="buyBean(10000)" class="btn btn-info">Buy</td>
       </tr>
     </tbody>
   </table>
