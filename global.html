@@ -98,23 +98,7 @@ body {
    <a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a>
     <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a>
 </div>
- <script>  function getBeans(beans) {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.beans) {
-            localStorage.beans = Number(localStorage.beans)+beans;
-        } else {
-            localStorage.beans = 1;
-        }
-        
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-    }
-  
-document.getElementById("5").innerHTML = localStorage.beans;
-
-    window.setTimeout(getBeans, 300000);</script>
+ <script>  document.getElementById("hcb_form_name").disabled = true;</script>
 <body>
  <h4>Coffee Media Global chat</h4>
  <p>For avatar images, please create a Gravatar account, as this site depends on it for avatar images.</p>
