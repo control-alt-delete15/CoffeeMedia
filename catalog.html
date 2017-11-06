@@ -135,7 +135,23 @@ body {
 </div>
   </div>
   <script>
- 
+ function rank() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.rank) {
+            
+            localStorage.rank = localStorage.rank;
+        } 
+        else {
+            localStorage.rank = "HomeBrewer";
+        }
+        document.getElementById("rank").innerHTML = localStorage.rank;
+}
+rank();
+}
+function rankUp(update){
+localStorage.rank = update;
+document.getElementById("rank").innerHTML = localStorage.rank;
+}
 
 function bug() {
 alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
@@ -164,20 +180,16 @@ function getBean() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-function buyBean(price, id) {
+function buyBean(price) {
   
         if (localStorage.beans > price) {
             localStorage.beans = localStorage.beans - price;
             bean();
-         if (id == '002'){
-           document.getElementById("item").innerHTML = 'div class="alert alert-success"><strong class="fa fa-coffee"></strong><p id="result">You Are now a Barista!</p>
-</div>';
-           
-         }
+        
         } else {
             alert("You cannot afford this");
         }
-    
+      if (price == 500) { rankUp("Barista"); }
 }
 
    
@@ -187,7 +199,9 @@ function buyBean(price, id) {
   <div class="alert alert-success">
     <strong class="fa fa-coffee"></strong><p id="result">Loading...</p>
 </div>
-  <span id="item"></span
+   <div class="alert alert-success">
+    <strong class="fa fa-coffee"></strong><p id="rank">Loading...</p>
+</div>
 <div class="container">
   <h2>CoffeeShop</h2>
   <p>Welcome to the CoffeShop! Here you can spend all the CoffeeBeans you want.</p>  
@@ -206,19 +220,19 @@ function buyBean(price, id) {
         <td>CoffeeCup</td>
         <td>001</td>
         <td><span class="fa fa-coffee"></span> 10</td>
-        <td onclick="buyBean(10, '001')" class="btn btn-info">Buy</td>
+        <td onclick="buyBean(10)" class="btn btn-info">Buy</td>
       </tr>
       <tr>
         <td>Barista</td>
         <td>002</td>
         <td><span class="fa fa-coffee"></span> 500</td>
-        <td onclick="buyBean(500, '002')" class="btn btn-info">Buy</td>
+        <td onclick="buyBean(500)" class="btn btn-info">Buy</td>
       </tr>
        <tr>
         <td>CoffeePot</td>
         <td>003</td>
         <td><span class="fa fa-coffee"></span> 150</td>
-          <td onclick="buyBean(150, '003')" class="btn btn-info">Buy</td>
+          <td onclick="buyBean(150)" class="btn btn-info">Buy</td>
       </tr>
     </tbody>
   </table>
