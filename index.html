@@ -177,13 +177,12 @@ function removeAllBeans() {
 function showBar() {
     if (localStorage.bar == null) {
          localStorage.bar = "Open";
-    document.getElementById("icon-bar").innerHTML = 
-    '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> ';
+    document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> ';
     document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//www.htmlcommentbox.com/logout?then=http://coffeemedia.cf" class="btn btn-success btn-block">Logout</a>';
     }
     if(localStorage.bar == "Open") {
+        localStorage.bar = null;
        document.getElementById("icon-bar").innerHTML = '<span></span>';
-         localStorage.bar = null;
         document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force" class="btn btn-success btn-block">Login</a>';
   
        }
