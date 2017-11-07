@@ -101,7 +101,7 @@ body {
 </style>
 <body>
 <div class="icon-bar" id="icon-bar">
-
+<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> 
 </div>
 <p></p>
 <script>
@@ -130,19 +130,19 @@ function bean() {
         if (localStorage.beans) {
             localStorage.beans = Number(localStorage.beans);
             rank();
-           topBar();
+           //topBar();
         } else {
             localStorage.beans = 1;
             rank();
-             topBar();
+             //topBar();
         }
         document.getElementById("result").innerHTML = localStorage.beans;
         rank();
-         topBar();
+        // topBar();
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
         rank();
-         topBar();
+        // topBar();
     }
 }
 function getBean() {
@@ -174,7 +174,7 @@ function removeAllBeans() {
     localStorage.beans = 0;
     
     }
-function showBar() {
+/* function showBar() {
     if (localStorage.bar == null) {
          localStorage.bar = "Open";
     document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> ';
