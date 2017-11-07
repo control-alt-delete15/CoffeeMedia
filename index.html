@@ -99,16 +99,9 @@ body {
 }
 }
 </style>
-<body id="hide">
-<div class="icon-bar">
-  <a class="active" href=""><i class="fa fa-home"></i></a> 
-   <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-  <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> 
-  <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a>
-  <a href="" onclick="bug()"><i class="fa fa-bug"></i></a>
-  <a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a>
-  <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a>
-    <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> 
+<body>
+<div class="icon-bar" id="icon-bar">
+
 </div>
 <p></p>
 <script>
@@ -177,19 +170,13 @@ function removeAllBeans() {
     localStorage.beans = 0;
     
     }
-
+function showBar() {
+    document.getElementById("icon-bar").innerHTML = 
+    '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> ';
+    
+}
 </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#hide").load(function(){
-        $(".icon-bar").hide();
-    });
-    $("#show").click(function(){
-        $(".icon-bar").show();
-    });
-});
-</script>
+   
 <img scr="https://image.freepik.com/free-vector/coffee-cup-icon_23-2147511225.jpg">   
 <div class="container">
   <div class="jumbotron">
@@ -203,8 +190,12 @@ $(document).ready(function(){
     <strong >Rank</strong><p id="rank">Loading...</p>
 </div>
   </div>
-     <button href="" class="btn btn-success btn-block" id=show >login</button>
-<div class="container">
+     <button onclick="showBar()" href="https://accounts.google.com/o/oauth2/auth?scope=email&state=https%3A//coffee-media.github.io/beta/text.html&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force" class="btn btn-success btn-block" id=show >login</button>
+    <p></p>
+    
+    
+    
+    <div class="container">
   <div class="jumbotron">
     
        <center><h1 class="fa fa-coffee"></h1><h1>CoffeeBeans and CoffeeCups</h1> </center>
