@@ -130,19 +130,18 @@ function bean() {
         if (localStorage.beans) {
             localStorage.beans = Number(localStorage.beans);
             rank();
-           //topBar();
         } else {
             localStorage.beans = 1;
             rank();
-             //topBar();
+      
         }
         document.getElementById("result").innerHTML = localStorage.beans;
         rank();
-        // topBar();
+    
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
         rank();
-        // topBar();
+  
     }
 }
 function getBean() {
