@@ -16,8 +16,28 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script>
+        function bean() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans);
+            rank();
+        } else {
+            localStorage.beans = 1;
+            rank();
+      
+        }
+        document.getElementById("result").innerHTML = localStorage.beans;
+        rank();
+    
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        rank();
+    }
+}
+    </script>
 </head>
-<body>
+
 
 <style>
 body {
@@ -125,25 +145,7 @@ document.getElementById("rank").innerHTML = localStorage.rank;
 function bug() {
 alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
 }   
-function bean() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.beans) {
-            localStorage.beans = Number(localStorage.beans);
-            rank();
-        } else {
-            localStorage.beans = 1;
-            rank();
-      
-        }
-        document.getElementById("result").innerHTML = localStorage.beans;
-        rank();
-    
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-        rank();
-  
-    }
-}
+
 function getBean() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.beans) {
