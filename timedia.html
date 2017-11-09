@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+  <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
+
+  <title>CoffeeMedia</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<style>
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.active {
+    background-color: #4CAF50; /* 	fa fa-address-bookAdd an active/current color */
+
+}
+}
+</style>
+<body>
+<div class="icon-bar">
+  <a  href="/index.html"><i class="fa fa-home"></i></a> 
+   <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+  <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> 
+  <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a>
+  <a href="" onclick="bug()"><i class="fa fa-bug"></i></a>
+<a href=""  class="active"><i class="fa fa-user-circle"></i></a>
+    <a href="/gift.html" ><i class="glyphicon glyphicon-gift"></i></a>
+    <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> 
+      <a class="" href="/bank.html"><i class="material-icons">account_balance_wallet</i></i></a> 
+</div>
+<p></p>
+<script>
+ 
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans)+0;
+        } else {
+            localStorage.beans = 1;
+        }
+   
+    
+      function getBeans(beans) {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.beans) {
+            localStorage.beans = Number(localStorage.beans)+beans;
+        } else {
+            localStorage.beans = 1;
+        }
+        
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+    }
+function bug() {
+alert("Bug reporter has a bug and cannot be used right now. Please report this bug to bug reporter.");
+}   
+document.getElementById("5").innerHTML = localStorage.beans;
+
+    window.setTimeout(getBeans, 300000);
+    //Jacob Robinson fa fa-building-o
+</script>
+    <div class="container">
+  <div class="jumbotron">
+<div class="w3-card-2 w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">TiMedia's Profile</h4>
+         <p class="w3-center">  <i><img src="https://m.media-amazon.com/images/S/aplus-media/sota/b7c4ebba-18a4-4d36-b2e9-81f6e41cc52c._SR285,285_.PNG"  width="100" height="100"> </i>
+         <hr>
+         <p><i class="fa fa-building-o fa-fw w3-margin-right w3-text-theme"></i>TiMedia</p>
+         <p><i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i>CEO: Jacob Robinson</p>
+         <p><i class="fa fa-window-restore  fa-fw w3-margin-right w3-text-theme"></i>
+         <a href="https://timedia.tk">https://timedia.tk</a></p>
+         <p><i class="fa fa-id-card-o fa-fw w3-margin-right w3-text-theme"></i>We are a great alternative to 				Google.</p>
+        </div>
+      </div>
+  </div>
+  </div>
+
+</div>
+ 
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=16734&num=10&ts=1510260104616");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<br>
+
+
+
+
+</body>
+</html> 
