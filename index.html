@@ -221,10 +221,8 @@ body {
     <strong >Rank</strong><p id="rank">Loading...</p>
 </div>
   </div>
-     <span id=login><a onclick="showBar()" href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force" class="btn btn-success btn-block">Login</a></span>
-<p></p>
-    <button onclick='getBean(10)' class="btn btn-success">Get 10 CoffeeBeans</button> <button onclick="removeAllBeans()" class="btn btn-danger">Remove all CoffeeBeans</button>
-    
+   <p></p>
+   
     
     <div class="container">
   <div class="jumbotron">
@@ -294,4 +292,69 @@ function closeNav() {
         <div class="panel-body"><a href="http://www.historynet.com/today-in-history">http://www.historynet.com/today-in-history</a></div>
     </div>
     </body>
+    <body id=everything onload="log()">
+<br>
+
+  <div class="container">
+  
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">CoffeeMedia Login</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login to CoffeeMedia</h4>
+        </div>
+        <div class="modal-body">
+          
+<div class="container">
+  
+
+  <form>
+    <div class="form-group">
+      <label for="usr">Userame:</label>
+      <input type="text" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password"  id="pwd">
+    </div>
+  </form>
+</div>
+<script>
+
+function setPwd()
+{
+	if (document.getElementById("pwd").value == atob("cXdlcnR5") && document.getElementById("usr").value == atob("SGF5ZGVu") ||
+		document.getElementById("pwd").value == atob("MzY0Ng==") && document.getElementById("usr").value == atob("QWRtaW4="))
+	{
+		var user = document.getElementById("usr").value;
+		document.getElementById("demo").innerHTML = "Welcome, " + user + ".";
+        
+	}
+	else
+	{
+		document.getElementById("demo").innerHTML = "Wrong";
+
+	}
+}
+</script>
+<button onclick="setPwd()" class="btn btn-success">Login</button>
+  <br>
+  <h4 id=demo></h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</body>
     </html>
