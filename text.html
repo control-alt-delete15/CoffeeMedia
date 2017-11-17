@@ -115,21 +115,74 @@ body {
 document.getElementById("5").innerHTML = localStorage.beans;
 
     window.setTimeout(getBeans, 300000);</script>
+  <style>
+  #HCB_comment_box .submit {
+    background:none; /* Clear twitter bootstrap style. */
+    background-color:green;
+    border:1px solid darkgreen;
+    color: white;
+  }
+  </style>
+    <!-- customize labels of htmlcommentbox.com -->
+<script>
+/* This code goes ABOVE the main HTML Comment Box code!
+ replace the text in the single quotes below to customize labels.*/
+hcb_user = {
+    /* L10N */
+    comments_header : 'Posts',
+    name_label : 'Userame',
+    content_label: 'Enter your post here',
+    submit : 'post',
+    logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
+    admin_link : '<img src="//www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon"/>',
+    no_comments_msg: '',
+    add:'Add your post',
+    again: 'Post again',
+    rss:'<img src="//www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
+    said:'said:',
+    prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+    next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+    showing:'Showing',
+    to:'to',
+    website_label:'website (optional)',
+    email_label:'email',
+    anonymous:'guest',
+    mod_label:'(ADMIN)',
+    subscribe:'subscribe',
+    are_you_sure:'Do you want to flag this post as inappropriate?',
 
- <h4>CoffeeMedia CoffeeRooms</h4>
- <p>Tons of different topics! All on the same page! Impossible, right? Wrong! With programing skills like CoffeeMedia's, anything's possible! Use #'s to symbolize youself in different topics.</p>
- <a type="button" class="btn btn-default" href="/global.html">Global</a><div class="well">Post with:<p>Anything! It's Global.</p></div>
- 
-  <a type="button" class="btn btn-default" href="/poltics.html">Poltics</a><div class="well">Post with:<p>#Democrat #Rebublican #Trump #Hillery ect.</p></div>
-  
-  <a type="button" class="btn btn-default" href="/sports.html">Sports</a><div class="well">Post with:<p>#Football #Soccer #Baseball #Tennis #Lacrosse ect.</p></div> 
-  
-  <a type="button" class="btn btn-default" href="/religion.html">Religion</a><div class="well">Post with:<p>#Prayer #God #Church #Synagog #Priest #Rabbi</p></div>
-  
-  
-  <a type="button" class="btn btn-default" href="/starwars.html">Star Wars</a><div class="well">Post with:<p>Anything Star Wars related</p></div>
-  
-  
-  <a type="button" class="btn btn-default" href="/books.html">Books</a><div class="well">Post with:<p>Anything book related</p></div>
+    reply:'<img src="//www.htmlcommentbox.com/static/images/reply.png"/> reply',
+    flag:'<img src="//www.htmlcommentbox.com/static/images/flag.png"/> flag',
+    like:'<img src="//www.htmlcommentbox.com/static/images/like.png"/> like',
+    
+    /* dates */
+    days_ago:'day(s) ago',
+    hours_ago:'hr(s) ago',
+    minutes_ago:'min(s) ago',
+    within_the_last_minute:'within the last minute',
+
+    msg_thankyou:'Thank you for postting!',
+    msg_approval:'(this post is not published until approved)',
+    msg_approval_required:'Thank you for post! Your comment will appear once approved by a moderator.',
+
+    err_bad_html:'Your comment contained bad html.',
+    err_bad_email:'Please enter a valid email address.',
+    err_too_frequent:'You must wait a few seconds between posting.',
+    err_comment_empty:'Your post was not posted because it was empty!',
+    err_denied:'Your post was not accepted.',
+
+    /* SETTINGS */
+    MAX_CHARS: 1000,
+    PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+    ON_COMMENT: function(){}, /* Function to call after commenting. */
+    RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+};
+</script>
+<!-- done customizing labels of htmlcommentbox.com -->
+ <!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=18814&num=10&ts=1510958491249");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
  </body>
 </html>
