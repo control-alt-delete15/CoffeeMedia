@@ -23,15 +23,18 @@
 		function setPwd()
 {
 			var uname =  [
-			atob("SGF5ZGVu"), 
-			atob("cmdyYWluZXI=") 
+			"Hayden", 
+			"rgrainer",
+			"henhen1227_"
 			];
 		var pwrd = [
 			atob("cXdlcnR5"), 
-			atob("c25vd2ZsYWtl")
+			atob("c25vd2ZsYWtl"),
+			atob("cGFzc3dvcmQ=")
 			];
 	if (document.getElementById("pwd").value == pwrd[1] && document.getElementById("usr").value == uname[1] ||
-		document.getElementById("pwd").value == pwrd[2] && document.getElementById("usr").value == uname[1] )
+		document.getElementById("pwd").value == pwrd[2] && document.getElementById("usr").value == uname[2] ||
+		document.getElementById("pwd").value == pwrd[3] && document.getElementById("usr").value == uname[3] )
 	{
 		var user = document.getElementById("usr").value;
 		document.getElementById("demo").innerHTML = "Welcome, " + user + ".";
