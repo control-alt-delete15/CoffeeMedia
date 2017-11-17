@@ -16,11 +16,7 @@
 </head>
 
 <style>
-    input#hcb_form_name {
-    color:blue;
-    font-size:18px;
-    background-color:darkgreen;
-  }
+
 body {
     font-family: "Lato", sans-serif;
 }
@@ -116,7 +112,8 @@ body {
     }
 }
     }
-  
+   document.getElementById("hcb_form_name").disabled = true;
+   
 document.getElementById("5").innerHTML = localStorage.beans;
 
     window.setTimeout(getBeans, 300000);</script>
