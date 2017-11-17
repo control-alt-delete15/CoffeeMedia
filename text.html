@@ -14,8 +14,13 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
- 
+
 <style>
+    input#hcb_form_name {
+    color:blue;
+    font-size:18px;
+    background-color:darkgreen;
+  }
 body {
     font-family: "Lato", sans-serif;
 }
@@ -115,14 +120,7 @@ body {
 document.getElementById("5").innerHTML = localStorage.beans;
 
     window.setTimeout(getBeans, 300000);</script>
-  <style>
-  #HCB_comment_box .submit {
-    background:none; /* Clear twitter bootstrap style. */
-    background-color:green;
-    border:1px solid darkgreen;
-    color: white;
-  }
-  </style>
+
     <!-- customize labels of htmlcommentbox.com -->
 <script>
 /* This code goes ABOVE the main HTML Comment Box code!
