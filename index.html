@@ -17,10 +17,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<script>function setPwd()
+	<script>
+
+		
+		function setPwd()
 {
-	if (document.getElementById("pwd").value == atob("cXdlcnR5") && document.getElementById("usr").value == atob("SGF5ZGVu") ||
-		document.getElementById("pwd").value == atob("c25vd2ZsYWtl") && document.getElementById("usr").value == atob("cmdyYWluZXI="))
+			var uname =  [
+			atob("SGF5ZGVu"), 
+			atob("cmdyYWluZXI=") 
+			];
+		var pwrd = [
+			atob("cXdlcnR5"), 
+			atob("c25vd2ZsYWtl")
+			];
+	if (document.getElementById("pwd").value == pwrd[1] && document.getElementById("usr").value == uname[1] ||
+		document.getElementById("pwd").value == pwrd[2] && document.getElementById("usr").value == uname[1] )
 	{
 		var user = document.getElementById("usr").value;
 		document.getElementById("demo").innerHTML = "Welcome, " + user + ".";
