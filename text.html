@@ -99,24 +99,7 @@ body {
  <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> 
       <a class="" href="/bank.html"><i class="material-icons">account_balance_wallet</i></i></a> -->
 </div>
- <script>  function getBeans(beans) {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.beans) {
-            localStorage.beans = Number(localStorage.beans)+beans;
-        } else {
-            localStorage.beans = 1;
-        }
-        
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-    }
-   document.getElementById("hcb_form_name").disabled = true;
-   
-document.getElementById("5").innerHTML = localStorage.beans;
-
-    window.setTimeout(getBeans, 300000);</script>
+ <script> 
 
     <!-- customize labels of htmlcommentbox.com -->
 <script>
