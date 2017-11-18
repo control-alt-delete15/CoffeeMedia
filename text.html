@@ -16,11 +16,7 @@
 </head>
   <script>
     function nameLock() {
-
-      document.getElementById('hcb_form_name').disabled = true;   
-   }
-  
-
+document.getElementById('hcb_form_name').disabled = true;    }
 setInterval(nameLock, 50)
   </script>
 <style>
@@ -116,7 +112,7 @@ body {
 hcb_user = {
     /* L10N */
     comments_header : 'Posts',
-    name_label : 'Userame',
+    name_label : 'Guest',
     content_label: 'Enter your post here',
     submit : 'post',
     logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
@@ -165,6 +161,7 @@ hcb_user = {
 };
 
 </script>
+  <button href="https://accounts.google.com/o/oauth2/auth?scope=email&amp;state=http%3A//coffeemedia.cf/text.html&amp;redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&amp;response_type=code&amp;client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&amp;approval_prompt=force">Login with Google</button>
 <!-- done customizing labels of htmlcommentbox.com -->
  <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
