@@ -19,7 +19,9 @@
 		document.getElementById("pwd").value == pwrd[3] && document.getElementById("usr").value == uname[3] )
 	{
 		var user = document.getElementById("usr").value;
-		document.getElementById("demo").innerHTML = "Welcome, " + user + ".";
+		 localStorage.username = user;
+		localStorage.logged = true;
+		 window.location.assign("http://coffeemedia.cf/text")
         
 	}
 	else
