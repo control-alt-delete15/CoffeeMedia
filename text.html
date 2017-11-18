@@ -14,7 +14,15 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+  <script>
+    function nameLock() {
 
+      document.getElementById('hcb_form_name').disabled = true;   
+   }
+  
+
+setInterval(nameLock, 50)
+  </script>
 <style>
 
 body {
@@ -155,7 +163,7 @@ hcb_user = {
     ON_COMMENT: function(){}, /* Function to call after commenting. */
     RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
-  document.getElementById("hcb_form_name").disabled = true;
+
 </script>
 <!-- done customizing labels of htmlcommentbox.com -->
  <!-- begin wwww.htmlcommentbox.com -->
