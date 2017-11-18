@@ -58,6 +58,18 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+  .loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
 </style>
 </head>
 <body>
@@ -161,7 +173,7 @@ hcb_user = {
 };
 
 </script>
-  <button href="https://accounts.google.com/o/oauth2/auth?scope=email&amp;state=http%3A//coffeemedia.cf/text.html&amp;redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&amp;response_type=code&amp;client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&amp;approval_prompt=force">Login with Google</button>
+<a href="https://accounts.google.com/o/oauth2/auth?scope=email&amp;state=http%3A//coffeemedia.cf/text.html&amp;redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&amp;response_type=code&amp;client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&amp;approval_prompt=force">  <button class="loginBtn loginBtn--google" >Login with Google</button></a>
 <!-- done customizing labels of htmlcommentbox.com -->
  <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
