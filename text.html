@@ -169,8 +169,17 @@ body {
  <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> 
       <a class="" href="/bank.html"><i class="material-icons">account_balance_wallet</i></i></a> -->
 </div>
+<script>if (getQueryVariable("app") == 2) {
+  document.getElementById("chat").style = "";
+  document.getElementById("joinChatBtn").style = "";
+}
 
-
+function joinChat() {
+  var url = "index.html?app=" + document.getElementById("chat").value;
+  localStorage.workToSave= url;
+  window.location.href = "index.html?app=7";
+}</script>
+  <button class="btn btn-basic" onclick="joinChat">Join</button>
     <!-- customize labels of htmlcommentbox.com -->
 <script>
 /* This code goes ABOVE the main HTML Comment Box code!
