@@ -4,24 +4,19 @@
 
 <title>CoffeeMedia</title>
     <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
-    
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    </script>
+    <script>
+    function nameLock() {
+      if (localStorage.logged == true){
+        document.getElementById('hcb_form_name').value = localStorage.username;
+    }
+document.getElementById('hcb_form_name').disabled = true;    }
+setInterval(nameLock, 50)
+  </script>
 <style>
+
 body {
     font-family: "Lato", sans-serif;
 }
-
 .sidenav {
     height: 100%;
     width: 0;
@@ -34,7 +29,6 @@ body {
     transition: 0.5s;
     padding-top: 60px;
 }
-
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -43,11 +37,9 @@ body {
     display: block;
     transition: 0.3s;
 }
-
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -55,43 +47,101 @@ body {
     font-size: 36px;
     margin-left: 50px;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-</style><script type="text/javascript" src="//www.htmlcommentbox.com/jread?page=http%3A%2F%2Fcoffeemedia.cf%2F&amp;mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F&amp;opts=27006&amp;num=10&amp;ts=1511018288461"></script></head>
-<body onload=getChat()>
-  <script>
-
-var getQueryString = function ( field, url ) {
-    var href = url ? url : window.location.href;
-    var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
-    var string = reg.exec(href);
-    return string ? string[1] : null;
-};
-   
-  var chatNum = getQueryString('chat'); 
- function getChat() {
-document.getElementById("whopple").innerhtml = chatNum;
-
+/* Shared */
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
 }
-  </script>
-  <h1 id=whopple>Loading Chat...</h1>
-  <script>
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+</style>
+ 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+<script type="text/javascript" src="//www.htmlcommentbox.com/jread?page=http%3A%2F%2Fcoffeemedia.cf%2F&amp;mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F&amp;opts=27006&amp;num=10&amp;ts=1511018288461"></script></head>
+<script>
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
 hcb_user = {
     /* L10N */
-    comments_header : 'Recent Posts',
-    name_label : 'Name',
-    content_label: 'Enter your comment here',
-    submit : 'Comment',
+    comments_header : 'Posts',
+    name_label : 'Guest',
+    content_label: 'Enter your post here',
+    submit : 'post',
     logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
     admin_link : '<img src="//www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon"/>',
-    no_comments_msg: 'No one has commented yet. Be the first!',
-    add:'Add your comment',
-    again: 'Post another comment',
+    no_comments_msg: '',
+    add:'Add your post',
+    again: 'Post again',
     rss:'<img src="//www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
     said:'said:',
     prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
@@ -100,40 +150,48 @@ hcb_user = {
     to:'to',
     website_label:'website (optional)',
     email_label:'email',
-    anonymous:'Anonymous',
-    mod_label:'(ADMIN)',
-    subscribe:'email me replies',
-    are_you_sure:'Do you want to flag this comment as inappropriate?',
+    anonymous:'Guest',
+    mod_label:'ADMIN',
+    subscribe:'subscribe',
+    are_you_sure:'Do you want to report this post?',
 
-    reply:'<img src="//www.htmlcommentbox.com/static/images/reply.png"/> reply',
-    flag:'<img src="//www.htmlcommentbox.com/static/images/flag.png"/> flag',
-    like:'<img src="//www.htmlcommentbox.com/static/images/like.png"/> like',
+    reply:' Reply',
+    flag:' Report',
+    like:' Like',
     
     /* dates */
     days_ago:'days ago',
-    hours_ago:'hours ago',
+    hours_ago:'hour ago',
     minutes_ago:'minutes ago',
     within_the_last_minute:'within the last minute',
 
-    msg_thankyou:'Thank you for commenting!',
-    msg_approval:'(this comment is not published until approved)',
-    msg_approval_required:'Thank you for commenting! Your comment will appear once approved by a moderator.',
+    msg_thankyou:'Thank you for posting!',
+    msg_approval:'(this post is not published until approved)',
+    msg_approval_required:'Thank you for post! Your comment will appear once approved by a moderator.',
 
     err_bad_html:'Your comment contained bad html.',
     err_bad_email:'Please enter a valid email address.',
-    err_too_frequent:'You must wait a few seconds between posting comments.',
-    err_comment_empty:'Your comment was not posted because it was empty!',
-    err_denied:'Your comment was not accepted.',
+    err_too_frequent:'You must wait a few seconds between posting.',
+    err_comment_empty:'Your post was not posted because it was empty!',
+    err_denied:'Your post was not accepted.',
 
     /* SETTINGS */
-    MAX_CHARS: 8192,
+    MAX_CHARS: 1000,
     PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
     ON_COMMENT: function(){}, /* Function to call after commenting. */
     RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
+
 </script>
+ 
+<a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"> 
+  
+  <button class="loginBtn loginBtn--google" >Login with Google</button></a>
 <!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16766&num=10&ts=1511304943419");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=18814&num=50&ts=1511305584120");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
+</body>
+
+ 
