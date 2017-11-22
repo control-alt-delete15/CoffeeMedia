@@ -218,16 +218,17 @@ function closeNav() {
 	
 	
 	function setUname() {
-	document.getElementById("Username").innerHTML = document.getElementById("hcb_form_name").value; 
+		document.getElementById("Username").innerHTML = document.getElementById("hcb_form_name").value;
+		document.getElementById("Username2").innerHTML = document.getElementById("hcb_form_name").value; 
 	}
 	setInterval(setUname, 50)
 	</script>
 
  <p></p>
-	div class="container">
+	<div class="container">
   <div class="jumbotron">
 	  <center><h1 id="Username">Guest</h1></center>
-	  <p>Welcome, <div id=Username2">Guest. Please login</div>.</p>
+	  <h5>Welcome, <h5 id=Username2">Guest. Please login</h5>.</h5>
 
    
 	
