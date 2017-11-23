@@ -142,7 +142,7 @@ body {
     
     </ul>
 
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right" id="Username">
       <li><a href="/signup"><span class="fa fa-user-plus"></span> Sign Up</a></li>
       <li><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
@@ -186,7 +186,32 @@ body {
     <p>Step 4: Click Add</p>
     <p>Step 5: Press the <span class="fa fa-windows" style="font-size:24px"></span> button</p>
     <p>Step 6: You should see it.</p>
+<script>
+	
+	function setUname() {
+		if (document.getElementById("hcb_form_name").value == "") {
+		
+		    
+		    }
+		    else {
+		document.getElementById("Username").innerHTML = "<li><a >" + document.getElementById("hcb_form_name").value + "</a></li>"
+		var Username = document.getElementById("hcb_form_name").value; 
+	}
+	
+	}
+	setInterval(setUname, 50)
+	</script>
 
+ <p></p>
+	
+
+
+
+   <!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="http://coffeemedia.cf/private-chat";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=16766&num=50&ts=1511363636251");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->   
 </div>
 </body> 
     </html>
