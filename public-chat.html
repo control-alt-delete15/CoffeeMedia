@@ -179,7 +179,7 @@ body {
 
     <ul class="nav navbar-nav navbar-right" id="Username">
       <li><a href="/signup"><span class="fa fa-user-plus"></span> Sign Up</a></li>
-      <li><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li id="Logout"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
 </nav>
@@ -192,7 +192,8 @@ body {
 		    }
 		    else {
 		document.getElementById("Username").innerHTML = "<li><a >" + document.getElementById("hcb_form_name").value + "</a></li>"
-		var Username = document.getElementById("hcb_form_name").value; 
+		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat'> Logout</a>"
+			    var Username = document.getElementById("hcb_form_name").value; 
 	}
 	
 	}
