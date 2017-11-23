@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
+
+<title>CoffeeMedia</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script>
+		
+		function setPwd()
+{
+			var uname =  [
+			"Hayden", 
+			"rgrainer",
+			"henhen1227_"
+			];
+		var pwrd = [
+			atob("bWRpYS50aw=="), 
+			atob("c25vd2ZsYWtl"),
+			atob("cGFzc3dvcmQ=")
+			];
+	if (document.getElementById("pwd").value == pwrd[1] && document.getElementById("usr").value == uname[1] ||
+		document.getElementById("pwd").value == pwrd[2] && document.getElementById("usr").value == uname[2] ||
+		document.getElementById("pwd").value == pwrd[3] && document.getElementById("usr").value == uname[3] )
+	{
+		var user = document.getElementById("usr").value;
+		document.getElementById("demo").innerHTML = "Welcome, " + user + ".";
+        
+	}
+	else
+	{
+		document.getElementById("demo").innerHTML = "Wrong";
+	}
+}
+</script>
+    <script>
+       
+    </script>
+</head>
+
+
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body onload='document.getElementById("HCB_comment_box").hidden = true;'>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<style>
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+.active {
+    background-color: #4CAF50; /* 	fa fa-address-bookAdd an active/current color */
+}
+}
+</style>
+<body onload='document.getElementById("HCB_comment_box").hidden = true'>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://coffeemedia.cf">CoffeeMedia</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://coffeemedia.cf">Home</a></li>
+           <li><a href="/public-chat">Public Chat</a></li>
+	 
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+		<li><a href="/how-to-download">Download for <span class="fa fa-windows" style="font-size:24px"></span> Windows</a></li>
+          <li><a href="" disabled>Download for <span class="fa fa-apple" style="font-size:24px"></span> Apple</a></li>
+          
+        </ul>
+      </li>
+    
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/signup"><span class="fa fa-user-plus"></span> Sign Up</a></li>
+      <li><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<p></p>
+<script>
+/* function showBar() {
+    if (localStorage.bar == null) {
+         localStorage.bar = "Open";
+    document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> ';
+    document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//www.htmlcommentbox.com/logout?then=http://coffeemedia.cf" class="btn btn-success btn-block">Logout</a>';
+    }
+    if(localStorage.bar == "Open") {
+        localStorage.bar = null;
+       document.getElementById("icon-bar").innerHTML = '<span></span>';
+        document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force" class="btn btn-success btn-block">Login</a>';
+  
+       }
+}  function topBar() {
+  if (localStorage.bar == null) {
+     document.getElementById("icon-bar").innerHTML = '<span></span>'; 
+  }
+   if(localStorage.bar == "Open") {
+       document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a>';
+   
+   }
+}  
+ 
+</script>
+   
+<img scr="https://image.freepik.com/free-vector/coffee-cup-icon_23-2147511225.jpg">   
+<div class="container">
+  <div class="jumbotron">
+    <center><h1>C<img src="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png" style="width:12.5%">ffeeMedia</h1></center>
+    <p>Windows Download:</p>
+    <p>Step 1: In Google Chrome, click the the horizontal dots in the top right-hand corner.</p>
+    <p>Step 2: Click More Tools</p>
+    <p>Step 3: Click Add to Desktop</p>
+    <p>Step 4: Click Add</p>
+    <p>Step 5: Press the <span class="fa fa-windows" style="font-size:24px"></span> button</p>
+    <p>Step 6: You should see it.</p>
+
+</div>
+</body> 
+    </html>
