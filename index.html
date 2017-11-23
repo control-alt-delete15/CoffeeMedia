@@ -153,7 +153,7 @@ body {
     
     </ul>
 
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right" id="Username">
       <li><a href="/signup"><span class="fa fa-user-plus"></span> Sign Up</a></li>
       <li><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
@@ -208,55 +208,19 @@ body {
 </div>
 <script>
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-	
 	
 	function setUname() {
-		document.getElementById("Username").innerHTML = document.getElementById("hcb_form_name").value;
+		document.getElementById("Username").innerHTML = "<li><a >" + document.getElementById("hcb_form_name").value + "</a></li>"
 		var Username = document.getElementById("hcb_form_name").value; 
 	}
 	setInterval(setUname, 50)
 	</script>
 
  <p></p>
-	<div class="container">
-  <div class="jumbotron">
-	  <center><h1 id="Username">Guest</h1></center>
-	  
-   
 	
 
-    </body>
-<!--    <body id=everything onload="log()">
-<br>
-	    </div>
 
-  <div class=well>
 
-  <form>
-    <div class="form-group">
-      <label for="usr">Userame:</label>
-      <input type="text" id="usr">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password"  id="pwd">
-    </div>
-  </form>
-</div>
-  <p>
-    <input type="checkbox" checked="checked"> Remember me
-	  <p>      </p>
-<button onclick="setPwd()" class="btn btn-success">Login</button>
-		No account? Register <a href="/signup.html">Here</a>
-  <br>
-  <h4 id=demo></h4>
    <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
