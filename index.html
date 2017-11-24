@@ -295,13 +295,7 @@ body {
       
 </div>
 <script>
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
+
 	
 	function setUname() {
 		if (document.getElementById("hcb_form_name").value == "") {
@@ -309,7 +303,7 @@ function onSignIn(googleUser) {
 		    
 		    }
 		    else {
-			document.getElementById("Username").innerHTML = "<img src=" + profile.getImageUrl() + "><a>" + document.getElementById("hcb_form_name").value + "</a>"
+			document.getElementById("Username").innerHTML = "<a>" + document.getElementById("hcb_form_name").value + "</a>"
 			document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/'> Logout</a>"
 		var Username = document.getElementById("hcb_form_name").value; 
 	}
