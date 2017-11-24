@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html onload="document.getElementById('hcb_form_name').hidden = true">
+<html>
 <head>
   <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -18,7 +18,7 @@
     function nameLock() {
       if (localStorage.logged == true){
         document.getElementById('hcb_form_name').value = localStorage.username;
-	      document.getElementById('hcb_form_name').hidden = true;
+	      
     }
 document.getElementById('hcb_form_name').disabled = true;    }
 setInterval(nameLock, 50)
@@ -240,7 +240,7 @@ body {
 }
 }
 </style>
-<body>
+<body onload="document.getElementById('hcb_form_name').hidden = true">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
