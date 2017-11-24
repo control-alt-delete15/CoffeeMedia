@@ -184,20 +184,25 @@ body {
   .sidenav a {font-size: 18px;}
 }
 	
+body, html {
+    height: 100%;
+}
+
 .parallax {
- 
+    /* The image used */
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/1200px-Roasted_coffee_beans.jpg');
 
-
+    /* Full height */
     height: 100%; 
 
+    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1024px) {
     .parallax {
         background-attachment: scroll;
@@ -242,15 +247,15 @@ body {
 	<div class="parallax"></div>
 
     <center><h1>C<img src="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png" style="width:12.5%">ffeeMedia</h1></center>
-    <div>
+    <div style="height:100px">
 	<h4>Welcome to CoffeeMedia, a secure and dedicated social networking site.</h4>
 	</div>
 	<div class="parallax"></div>
-	   <div>
+	   <div style="height:100px">
 	<h4>Here at CoffeeMedia, we know how annoying it is to see ads everywhere. That's why CoffeeMedia is ad free.</h4>
 	</div>
 	<div class="parallax"></div>
-	   <div>
+	   <div style="height:100px">
 	<h4>Here at CoffeeMedia, we know how annoying it is to see ads everywhere. That's why CoffeeMedia is ad free.</h4>
 	</div>
       <!--<div class="alert alert-success">
