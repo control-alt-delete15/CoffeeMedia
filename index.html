@@ -183,6 +183,26 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+	
+.parallax {
+ 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/1200px-Roasted_coffee_beans.jpg');
+
+
+    height: 100%; 
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
 </style>
 </head>
 <body onload='document.getElementById("HCB_comment_box").hidden = true;'>
@@ -275,10 +295,10 @@ body {
 </script>
    
 <img scr="https://image.freepik.com/free-vector/coffee-cup-icon_23-2147511225.jpg">   
-<div class="container">
-  <div class="jumbotron">
+	<div class="paralax"></div>
+
     <center><h1>C<img src="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png" style="width:12.5%">ffeeMedia</h1></center>
-    <p>Your favorite social network is back. In a brand spankin' new style! All new look, improved quality and functions, things just can't get any better! But wait, there's more! Are you tired of that glitchy Free Comment Script? Well it is gone!</p>
+    <p>Welcome to CoffeeMedia, a secure and dedicated social networking site.</p>
 
       <!--<div class="alert alert-success">
     <strong class="fa fa-coffee"></strong><p id="result">Loading...</p>
