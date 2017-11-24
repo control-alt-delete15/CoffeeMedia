@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBugG72PRyWlYcEkXIVHbaP3Z_TAnUHFiY",
+    authDomain: "posting-f91ed.firebaseapp.com",
+    databaseURL: "https://posting-f91ed.firebaseio.com",
+    projectId: "posting-f91ed",
+    storageBucket: "",
+    messagingSenderId: "603602752338"
+  };
+  firebase.initializeApp(config);
+</script>
   <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>CoffeeMedia</title>
@@ -22,6 +36,14 @@
     }
 document.getElementById('hcb_form_name').disabled = true;    }
 setInterval(nameLock, 50)
+	 
+	  service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
   </script>
 <style>
 .navbar-default {
