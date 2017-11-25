@@ -303,19 +303,25 @@ body {
 	function setUname() {
 		if (document.getElementById("hcb_form_name").value == "") 
 		{
-		document.getElementById('hcb_form_name').hidden = true;
-		   document.getElementById('hcb_msg').hidden = true;
+
 		    }
 		    else {
-			   document.getElementById('hcb_form_name').hidden = true; 
-			    document.getElementById('hcb_msg').hidden = true;
+			
 		document.getElementById("Username").innerHTML = "<a >" + document.getElementById("hcb_form_name").value + "</a>"
 		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat'> Logout</a>";
 			    var Username = document.getElementById("hcb_form_name").value; 
 	}
 	
 	}
-	setInterval(setUname, 50)
+	setInterval(setUname, 500)
+	
+	
+	function hideItem() {
+			document.getElementById('hcb_form_name').hidden = true;
+		   document.getElementById('hcb_msg').hidden = true;	
+		
+	}
+	setInterval(hideItem, 50)
 	</script>
     <!-- customize labels of htmlcommentbox.com -->
 <script>
