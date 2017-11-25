@@ -365,7 +365,7 @@ hcb_user = {
     /* SETTINGS */
     MAX_CHARS: 1000,
     PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
-    ON_COMMENT: function(){}, /* Function to call after commenting. */
+    ON_COMMENT: function(){hcb.make_comment_form()}, /* Function to call after commenting. */
     RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
 
