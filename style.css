@@ -1,45 +1,145 @@
-.navbar-custom {
-    background-color:#229922;
-    color:#ffffff;
-    border-radius:0;
+.navbar-default {
+  background-color: #77b659;
+  border-color: #13781f;
+}
+.navbar-default .navbar-brand {
+  color: #075806;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #e2ffdb;
+}
+.navbar-default .navbar-text {
+  color: #075806;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #075806;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #e2ffdb;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #77b659;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #075806;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #e2ffdb;
+  background-color: #13781f;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #13781f;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #e2ffdb;
+  background-color: #13781f;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #e2ffdb;
+  background-color: #13781f;
+}
+.navbar-default .navbar-toggle {
+  border-color: #13781f;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #13781f;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #075806;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #075806;
+}
+.navbar-default .navbar-link {
+  color: #075806;
+}
+.navbar-default .navbar-link:hover {
+  color: #e2ffdb;
 }
 
-.navbar-custom .navbar-nav > li > a {
-    color:#fff;
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #075806;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #e2ffdb;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #e2ffdb;
+    background-color: #13781f;
+  }
+}
+	}
+body {
+    font-family: "Lato", sans-serif;
 }
 
-.navbar-custom .navbar-nav > .active > a {
-    color: #ffffff;
-    background-color:transparent;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.navbar-custom .navbar-nav > li > a:hover,
-.navbar-custom .navbar-nav > li > a:focus,
-.navbar-custom .navbar-nav > .active > a:hover,
-.navbar-custom .navbar-nav > .active > a:focus,
-.navbar-custom .navbar-nav > .open >a {
+.sidenav a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    background-color: #33aa33;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.navbar-custom .navbar-brand {
-    color:#eeeeee;
-}
-.navbar-custom .navbar-toggle {
-    background-color:#eeeeee;
-}
-.navbar-custom .icon-bar {
-    background-color:#33aa33;
+.sidenav a:hover {
+    color: #f1f1f1;
 }
 
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
-/* for dropdowns only */
-.navbar-custom .navbar-nav .dropdown-menu  { 
-  background-color: #33aa33;
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
-.navbar-custom .navbar-nav .dropdown-menu>li>a  { 
-  color: #fff;
+	
+body, html {
+    height: 100%;
 }
-.navbar-custom .navbar-nav .dropdown-menu>li>a:hover,.navbar-custom .navbar-nav .dropdown-menu>li>a:focus  { 
-  color: #33aa33;
+
+.parallax {
+    /* The image used */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/1200px-Roasted_coffee_beans.jpg');
+
+    /* Full height */
+    height: 30%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
