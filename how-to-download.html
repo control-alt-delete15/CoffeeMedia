@@ -1,312 +1,182 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
-
-<title>CoffeeMedia</title>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<script>
-		
-		function setPwd()
-{
-			var uname =  [
-			"Hayden", 
-			"rgrainer",
-			"henhen1227_"
-			];
-		var pwrd = [
-			atob("bWRpYS50aw=="), 
-			atob("c25vd2ZsYWtl"),
-			atob("cGFzc3dvcmQ=")
-			];
-	if (document.getElementById("pwd").value == pwrd[1] && document.getElementById("usr").value == uname[1] ||
-		document.getElementById("pwd").value == pwrd[2] && document.getElementById("usr").value == uname[2] ||
-		document.getElementById("pwd").value == pwrd[3] && document.getElementById("usr").value == uname[3] )
-	{
-		var user = document.getElementById("usr").value;
-		document.getElementById("demo").innerHTML = "Welcome, " + user + ".";
-        
-	}
-	else
-	{
-		document.getElementById("demo").innerHTML = "Wrong";
-	}
-}
-</script>
-    <script>
-       
-    </script>
-</head>
-
-
-<style>
-	.navbar-default {
-  background-color: #77b659;
-  border-color: #13781f;
-}
-.navbar-default .navbar-brand {
-  color: #075806;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #e2ffdb;
-}
-.navbar-default .navbar-text {
-  color: #075806;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #075806;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #e2ffdb;
-}
-.navbar-default .navbar-nav > li > .dropdown-menu {
-  background-color: #77b659;
-}
-.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
-  color: #075806;
-}
-.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
-.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-  color: #e2ffdb;
-  background-color: #13781f;
-}
-.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
-  background-color: #13781f;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #e2ffdb;
-  background-color: #13781f;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  color: #e2ffdb;
-  background-color: #13781f;
-}
-.navbar-default .navbar-toggle {
-  border-color: #13781f;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #13781f;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #075806;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #075806;
-}
-.navbar-default .navbar-link {
-  color: #075806;
-}
-.navbar-default .navbar-link:hover {
-  color: #e2ffdb;
-}
-
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #075806;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #e2ffdb;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #e2ffdb;
-    background-color: #13781f;
-  }
-}
-body {
-    font-family: "Lato", sans-serif;
-}
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
+      <title>CoffeeMedia</title>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body onload='document.getElementById("HCB_comment_box").hidden = true'>
+      <nav class="navbar navbar-default">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="http://coffeemedia.cf">CoffeeMedia</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <li ><a href="http://coffeemedia.cf">Home</a></li>
+                  <li><a href="/public-chat">Public Chat</a></li>
+                  <li class="dropdown active">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="/how-to-download">Download for <span class="fa fa-windows" style="font-size:24px"></span> Windows</a></li>
+                        <li><a href="" disabled>Download for <span class="fa fa-apple" style="font-size:24px"></span> Apple</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right" >
+                  <li id="Username"></li>
+                  <li id="Logout"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <p></p>
+      <script>
+         /* function showBar() {
+             if (localStorage.bar == null) {
+                  localStorage.bar = "Open";
+             document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> ';
+             document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//www.htmlcommentbox.com/logout?then=http://coffeemedia.cf" class="btn btn-success btn-block">Logout</a>';
+             }
+             if(localStorage.bar == "Open") {
+                 localStorage.bar = null;
+                document.getElementById("icon-bar").innerHTML = '<span></span>';
+                 document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force" class="btn btn-success btn-block">Login</a>';
+           
+                }
+         }  function topBar() {
+           if (localStorage.bar == null) {
+              document.getElementById("icon-bar").innerHTML = '<span></span>'; 
+           }
+            if(localStorage.bar == "Open") {
+                document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a>';
+            
+            }
+         }  
+          
+      </script>
+      <img scr="https://image.freepik.com/free-vector/coffee-cup-icon_23-2147511225.jpg">   
+      <div class="container">
+         <div class="jumbotron">
+            <center>
+               <h1>C<img src="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png" style="width:12.5%">ffeeMedia</h1>
+            </center>
+            <p>Windows Download:</p>
+            <p>Step 1: In Google Chrome, click the the horizontal dots in the top right-hand corner.</p>
+            <p>Step 2: Click More Tools</p>
+            <p>Step 3: Click Add to Desktop</p>
+            <p>Step 4: Click Add</p>
+            <p>Step 5: Press the <span class="fa fa-windows" style="font-size:24px"></span> button</p>
+            <p>Step 6: You should see it.</p>
+            <script>
+               function setUname() {
+               	if (document.getElementById("hcb_form_name").value == "") {
+               	
+               	    
+               	    }
+               	    else {
+               		document.getElementById("Username").innerHTML = "<a>" + document.getElementById("hcb_form_name").value + "</a>"
+               		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/'> Logout</a>"
+               	var Username = document.getElementById("hcb_form_name").value; 
+               }
+               
+               }
+               setInterval(setUname, 500)
+            </script>
+            <p></p>
+            <!-- begin wwww.htmlcommentbox.com -->
+            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+            <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
+            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="http://coffeemedia.cf/private-chat";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=16766&num=50&ts=1511363636251");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+            <!-- end www.htmlcommentbox.com -->   
+         </div>
+   </body>
+</html>
 </head>
 <body onload='document.getElementById("HCB_comment_box").hidden = true;'>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
-<style>
-.icon-bar {
-    width: 100%; /* Full-width */
-    background-color: #555; /* Dark-grey background */
-    overflow: auto; /* Overflow due to float */
-}
-.icon-bar a {
-    float: left; /* Float links side by side */
-    text-align: center; /* Center-align text */
-    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
-    padding: 12px 0; /* Some top and bottom padding */
-    transition: all 0.3s ease; /* Add transition for hover effects */
-    color: white; /* White text color */
-    font-size: 36px; /* Increased font size */
-}
-.icon-bar a:hover {
-    background-color: #000; /* Add a hover color */
-}
-.active {
-    background-color: #4CAF50; /* 	fa fa-address-bookAdd an active/current color */
-}
-}
-</style>
 <body onload='document.getElementById("HCB_comment_box").hidden = true'>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
 <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://coffeemedia.cf">CoffeeMedia</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li ><a href="http://coffeemedia.cf">Home</a></li>
-           <li><a href="/public-chat">Public Chat</a></li>
-	 
-      <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-		<li><a href="/how-to-download">Download for <span class="fa fa-windows" style="font-size:24px"></span> Windows</a></li>
-          <li><a href="" disabled>Download for <span class="fa fa-apple" style="font-size:24px"></span> Apple</a></li>
-          
-        </ul>
-      </li>
-    
-    </ul>
-	
-    <ul class="nav navbar-nav navbar-right" >
-      <li id="Username"><a href="/signup"><span class="fa fa-user-plus"></span> Sign Up</a></li>
-      <li id="Logout"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-	    	  </div>
-  </div>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://coffeemedia.cf">CoffeeMedia</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li class="active"><a href="http://coffeemedia.cf">Home</a></li>
+<li><a href="/public-chat">Public Chat</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="/how-to-download">Download for <span class="fa fa-windows" style="font-size:24px"></span> Windows</a></li>
+<li><a href="" class="disabled">Download for <span class="fa fa-apple" style="font-size:24px"></span> Apple</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li id="Username"></li>
+<li id="Logout"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+</ul>
+</div>
 </nav>
-
+<div class="parallax"></div>
+<div class=jumbotron>
+<center><h1>C<img src="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png" style="width:12.5%">ffeeMedia</h1>
+<h4>Welcome to CoffeeMedia, a secure and dedicated social networking site. Your info and needs are our first priority. We don't have a help forum because the public chat is checked daily, and all customer questions are guaranteed an answer.</h4><p></p><h4>See a post you don't like? Is it offensive... or maybe rude and inapropriate? It's never been easier to report bad posts, and with an instant report button, we can block any post with ease. Is someone harrasing you? BAM! hey're banned!</h4>
+</div>
+<div class="parallax"></div>
+<div class=jumbotron>
+<h4>Here at CoffeeMedia, we know how annoying it is to see ads everywhere. That's why CoffeeMedia is ad free. We are completly a independant, non-profit, ad-free, social network. You will never need to pay to get access, and anyone with a Google account can use it!</h4>
+</div>
+<div class="parallax"></div>
+<div class=jumbotron>
+</div>
+</center>
 <p></p>
+</div>
 <script>
-/* function showBar() {
-    if (localStorage.bar == null) {
-         localStorage.bar = "Open";
-    document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a> ';
-    document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//www.htmlcommentbox.com/logout?then=http://coffeemedia.cf" class="btn btn-success btn-block">Logout</a>';
-    }
-    if(localStorage.bar == "Open") {
-        localStorage.bar = null;
-       document.getElementById("icon-bar").innerHTML = '<span></span>';
-        document.getElementById("login").innerHTML = '<a onclick="showBar()" href="//https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force" class="btn btn-success btn-block">Login</a>';
-  
-       }
-}  function topBar() {
-  if (localStorage.bar == null) {
-     document.getElementById("icon-bar").innerHTML = '<span></span>'; 
-  }
-   if(localStorage.bar == "Open") {
-       document.getElementById("icon-bar").innerHTML = '<a class="active" href=""><i class="fa fa-home"></i></a> <a href="/catalog.html"><i class="glyphicon glyphicon-shopping-cart"></i></a> <a href="/text.html"><i class="glyphicon glyphicon-comment"></i></a> <a href="https://github.com/coffee-media"><i class="fa fa-github" ></i></a> <a href="" onclick="bug()"><i class="fa fa-bug"></i></a><a disabled href="/profile.html"><i class="fa fa-user-circle"></i></a> <a href="/gift.html"><i class="glyphicon glyphicon-gift"></i></a> <a class="" href="http://educationforcoffeemedia.cf"><i class="glyphicon glyphicon-education"></i></a>';
+   function setUname() {
+   	if (document.getElementById("hcb_form_name").value == "") {
+   	
+   	    
+   	    }
+   	    else {
+   		document.getElementById("Username").innerHTML = "<a>" + document.getElementById("hcb_form_name").value + "</a>"
+   		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/'> Logout</a>"
+   	var Username = document.getElementById("hcb_form_name").value; 
+   }
    
    }
-}  
- 
+   setInterval(setUname, 500)
 </script>
-   
-<img scr="https://image.freepik.com/free-vector/coffee-cup-icon_23-2147511225.jpg">   
-<div class="container">
-  <div class="jumbotron">
-    <center><h1>C<img src="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png" style="width:12.5%">ffeeMedia</h1></center>
-    <p>Windows Download:</p>
-    <p>Step 1: In Google Chrome, click the the horizontal dots in the top right-hand corner.</p>
-    <p>Step 2: Click More Tools</p>
-    <p>Step 3: Click Add to Desktop</p>
-    <p>Step 4: Click Add</p>
-    <p>Step 5: Press the <span class="fa fa-windows" style="font-size:24px"></span> button</p>
-    <p>Step 6: You should see it.</p>
-<script>
-	
-	function setUname() {
-		if (document.getElementById("hcb_form_name").value == "") {
-		
-		    
-		    }
-		    else {
-			document.getElementById("Username").innerHTML = "<a>" + document.getElementById("hcb_form_name").value + "</a>"
-			document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/'> Logout</a>"
-		var Username = document.getElementById("hcb_form_name").value; 
-	}
-	
-	}
-	setInterval(setUname, 500)
-	</script>
-
- <p></p>
-	
-
-
-
-   <!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="http://coffeemedia.cf/private-chat";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=16766&num=50&ts=1511363636251");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<p></p>
+<!-- begin wwww.htmlcommentbox.com -->
+<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/skeleton/skin.css" />
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="http://coffeemedia.cf/private-chat";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=16766&num=50&ts=1511363636251");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->   
 </div>
 </body> 
-    </html>
+</html>
