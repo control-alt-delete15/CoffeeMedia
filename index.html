@@ -77,18 +77,19 @@
          </div>
          <script>
             function setUname() {
-            	if (document.getElementById("hcb_form_name").value == "") {
+            	if (document.getElementById("hcb_form_name").value == "" || "Guest") {
             	
             	    
             	    }
             	    else {
                        	var Username = document.getElementById("hcb_form_name").value; 
             		document.getElementById("Uname").innerHTML = Username;
-        document.getElementById("log").innerHTML = '<a href="http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat"><button class="btn btn-danger">Logout</button></a>';
+        document.getElementById("log").innerHTML = '<a href="http://htmlcommentbox.com/logout?then=http://coffeemedia.cf"><button class="btn btn-danger">Logout</button></a>';
            
             }
             
             }
+            setUname();
             setInterval(setUname, 5000)
          </script>
          <p></p>
