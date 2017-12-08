@@ -39,8 +39,9 @@
                  
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                     <li><div class="dropdown"> <a class="dropdown-toggle" type="" data-toggle="dropdown">Account<span class="caret"></span></a> <ul class="dropdown-menu"><li><a><b id="Uname"> Guest</b></a></li><hr><li id="log"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><button class="btn btn-success">Login</button></a></ul></li></div></li>
-                        </ul>
+      <li id="Username"></li>
+      <li id="Logout"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&amp;state=http%3A//coffeemedia.cf/public-chat&amp;redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&amp;response_type=code&amp;client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&amp;approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
                </div>
          </nav>
          <div class="parallax"></div>
@@ -76,21 +77,20 @@
          <p></p>
          </div>
          <script>
-            function setUname() {
-            	if (document.getElementById("hcb_form_name").value == "" || "Guest") {
-            	
-            	    
-            	    }
-            	    else {
-                       	var Username = document.getElementById("hcb_form_name").value; 
-            		document.getElementById("Uname").innerHTML = Username;
-        document.getElementById("log").innerHTML = '<a href="http://htmlcommentbox.com/logout?then=http://coffeemedia.cf"><button class="btn btn-danger">Logout</button></a>';
-           
-            }
-            
-            }
-            setUname();
-            setInterval(setUname, 5000)
+	function setUname() {
+		if (document.getElementById("hcb_form_name").value == "") 
+		{
+		    }
+		    else {
+			
+		document.getElementById("Username").innerHTML = "<a >" + document.getElementById("hcb_form_name").value + "</a>"
+		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat'> Logout</a>";
+			    var Username = document.getElementById("hcb_form_name").value; 
+	}
+	
+	}
+	setInterval(setUname, 500)
+	
          </script>
          <p></p>
          <!-- begin wwww.htmlcommentbox.com -->
