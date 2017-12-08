@@ -39,7 +39,7 @@
                  
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                     <li id="Uname"></li>
+                     <li><div class="dropdown"> <a class="dropdown-toggle" type="" data-toggle="dropdown">Account<span class="caret"></span></a> <ul class="dropdown-menu"><li><a><b id="Uname"> Guest</b></a></li><hr><li id="log"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><button class="btn btn-success">Login</button></a></ul></li></div></li>
                         </ul>
                </div>
          </nav>
@@ -83,13 +83,13 @@
             	    }
             	    else {
                        	var Username = document.getElementById("hcb_form_name").value; 
-            		document.getElementById("Uname").innerHTML = '<div class="dropdown"> <a class="dropdown-toggle" type="" data-toggle="dropdown">Account<span class="caret"></span></a> <ul class="dropdown-menu"><li><a><b>' + Username + '</b></a></li><hr><li><a href="http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/"><button class="btn btn-danger">Logout</button></a></li></ul></div>';
-        
+            		document.getElementById("Uname").innerHTML = Username;
+        document.getElementById("log").innerHTML = '<a href="http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat"><button class="btn btn-danger">Logout</button></a>';
            
             }
             
             }
-            setInterval(setUname, 500)
+            setInterval(setUname, 5000)
          </script>
          <p></p>
          <!-- begin wwww.htmlcommentbox.com -->
