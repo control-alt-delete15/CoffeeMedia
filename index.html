@@ -83,9 +83,11 @@
             	    
             	    }
             	    else {
-            		document.getElementById("Username").innerHTML = "<a>" + document.getElementById("hcb_form_name").value + "</a>"
-            		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/'> Logout</a>"
-            	var Username = document.getElementById("hcb_form_name").value; 
+                       	var Username = document.getElementById("hcb_form_name").value; 
+            		document.getElementById("Uname").innerHTML = 
+                     '<div class="dropdown"> <a class="dropdown-toggle" type="" data-toggle="dropdown">Account<span class="caret"></span></a> <ul class="dropdown-menu"><li><a><b>' + Username + '</b></a></li><hr><li><a href="http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/"><button class="btn btn-danger">Logout</button></a></li></ul></div>'
+        
+           
             }
             
             }
