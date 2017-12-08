@@ -32,6 +32,9 @@
 
   <script>
     function nameLock() {
+	    document.getElementById("hcb_file").classList.add('btn');
+	    document.getElementById("hcb_file").classList.remove('inputfile');
+	    
       if (localStorage.logged == true){
         document.getElementById('hcb_form_name').value = localStorage.username;
 	      
@@ -200,6 +203,10 @@ hcb_user = {
 	</center>
 
 	<style>
+		label {
+			content: '<button class="btn btn-success">Upload Image</button>';
+			
+		}
  	.submit {
  display: inline-block;
 padding: 9px 12px;
