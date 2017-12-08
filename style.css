@@ -1,4 +1,16 @@
 
+
+  
+  #HCB_comment_box .submit {
+    
+    background-color:green;
+    border:1px solid darkgreen;
+    color: white;
+  }
+  
+    
+
+
 .meme {
   margin: auto;
   width: 450px;
