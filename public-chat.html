@@ -144,7 +144,7 @@ hcb_user = {
     comments_header : 'Posts',
     name_label : 'Guest',
     content_label: 'Enter your post here',
-    submit : 'post',
+    submit : 'POST',
     logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
     admin_link : '<img src="//www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon"/>',
     no_comments_msg: '',
@@ -163,9 +163,9 @@ hcb_user = {
     subscribe:'subscribe',
     are_you_sure:'Do you want to report this post?',
 
-    reply:'<button class="submit btn"> <i class="fa fa-telegram" style="font-size:20px"></i> Reply</button>',
-    flag:'<button class="submit btn">  <i class="fa fa-warning" style="font-size:20px"></i> Report</button>',
-    like:'<button class="submit btn">  <i class="fa fa-thumbs-o-up" style="font-size:20px"></i> Like</button>',
+    reply:'<button class="submit btn"> <i class="fa fa-telegram" style="font-size:20px"></i> REPLY</button>',
+    flag:'<button class="submit btn">  <i class="fa fa-warning" style="font-size:20px"></i> REPORT</button>',
+    like:'<button class="submit btn">  <i class="fa fa-thumbs-o-up" style="font-size:20px"></i> LIKE</button>',
     
     /* dates */
     days_ago:'days ago',
@@ -198,12 +198,30 @@ hcb_user = {
  <div id="HCB_comment_box"></div>
 
 	<style>
-		
  	.submit {
-    background:none;
-    background-color:green;
-    border:1px solid darkgreen;
-    color: white;
+ display: inline-block;
+padding: 9px 12px;
+padding-top: 7px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 20px;
+color: #5e5e5e;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-color: #d1dade;
+-webkit-border-radius: 3px;
+-webkit-border-radius: 3px;
+-webkit-border-radius: 3px;
+background-image: none !important;
+border: none;
+text-shadow: none;
+box-shadow: none;
+transition: all 0.12s linear 0s !important;
+font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+		color: #fff;
+background-color: #5cb85c;
+border-color: #4cae4c;
   }
 	</style>
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="http://coffeemedia.cf/public-chat";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=16766&num=50&ts=1511363548101");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
