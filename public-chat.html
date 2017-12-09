@@ -231,11 +231,11 @@ hcb_user = {
 
     /* SETTINGS */
     MAX_CHARS: 1000,
-    PAGE: getQueryVariable(chat), /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+    PAGE: '', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
     ON_COMMENT: function(){hcb.make_comment_form()}, /* Function to call after commenting. */
     RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
-function getQueryVariable(variable)
+/*function getQueryVariable(variable)
 {
        var query = window.location.search.substring(1);
        var vars = query.split("&");
@@ -246,7 +246,8 @@ function getQueryVariable(variable)
        return(false);
 }
 	document.getElementsByClassName("hcb-link del").innerHTML = '<button class="btn btn-danger btn-circle"><span class="glyphicon glyphicon-remove-circle"></span></button>';
-</script>
+*/
+	</script>
 
 		<!-- <textarea id="test01">
 	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Post</button>
