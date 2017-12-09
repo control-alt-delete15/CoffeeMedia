@@ -63,9 +63,9 @@ textarea:focus {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <script>
+
     function nameLock() {
-	    document.getElementById("hcb_file").classList.add('btn');
-	    document.getElementById("hcb_file").classList.remove('inputfile');
+
 	    
       if (localStorage.logged == true){
         document.getElementById('hcb_form_name').value = localStorage.username;
@@ -115,7 +115,7 @@ setInterval(nameLock, 50)
 }
 }
 </style>
-<body onload="document.getElementById('hcb_form_name').hidden = true">
+<body onload="document.getElementById('hcb_form_name').hidden = true; document.getElementById("hcb_file").className = "";">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
 <div class="navbar-header">
