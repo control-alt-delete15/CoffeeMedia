@@ -103,7 +103,7 @@ textarea:focus {
 
 
 
-a[target=_blank] {
+div a[target=_blank] {
         opacity: 0;
   
 }
