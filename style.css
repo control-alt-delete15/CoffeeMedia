@@ -119,7 +119,7 @@ div a[target=_blank] {
         
   
 }
-blockquote a {
+blockquote a[target=_blank] {
         opacity: 1;
 
   
