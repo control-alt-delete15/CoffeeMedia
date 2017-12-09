@@ -115,7 +115,7 @@ setInterval(nameLock, 50)
 }
 }
 </style>
-<body onload="document.getElementById('hcb_form_name').hidden = true; document.getElementById('hcb_file').className = '';">
+<body onload="document.getElementById('hcb_form_name').hidden = true; document.getElementById('hcb_file').className = ''; getElementsByAttribute( 'for', 'hcb_file' ).innerHTML = '<button class=submit>Upload Image</button>';">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
 <div class="navbar-header">
