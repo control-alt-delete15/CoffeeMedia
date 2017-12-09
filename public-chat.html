@@ -247,10 +247,10 @@ hcb_user = {
 		<hr><hr>
 		<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
 		 <div class="input-group">
-    <span class="input-group-addon btn btn-success"><i class="glyphicon glyphicon-tag"></i></span>
+   	<button class="btn btn-success input-group-addon" onclick="post(document.getElementById('test01').value)"><i class="glyphicon glyphicon-tag"></i></button>
 		 <input id="test01" class="form-control" style="width:50%;">
 		</div>
-	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Add Tag</button>
+
 	<script>function post(content) {
   document.getElementById('hcb_form_content').value = document.getElementById('hcb_form_content').value + " <b>#" + content + "</b>";
 
