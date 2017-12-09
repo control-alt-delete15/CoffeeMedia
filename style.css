@@ -104,6 +104,7 @@ textarea:focus {
 
 
 div a {
+	opacity: 1;
         color:green;
   
 }
