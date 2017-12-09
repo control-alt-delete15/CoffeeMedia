@@ -251,13 +251,14 @@ hcb_user = {
 		<hr><hr>
 		<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
 		 <div class="input-group">
-   	<span class="btn input-group-addon success" onclick="post(document.getElementById('test01').value)"><i class="glyphicon glyphicon-tag" style="color:green"></i></span>
+   	<span class="btn input-group-addon success" onclick="post(document.getElementById('test01').value)"><i class="glyphicon glyphicon-tag"></i></span>
 		 <input id="test01" class="form-control" style="width:50%;">
 		</div>
 
 	<script>function post(content) {
-  document.getElementById('hcb_form_content').value = document.getElementById('hcb_form_content').value + " <b>#" + content + "</b>";
-
+			if (content != "") {
+  	document.getElementById('hcb_form_content').value = document.getElementById('hcb_form_content').value + " <b>#" + content + "</b>";
+			}
 }</script>
  <div id="HCB_comment_box"></div>
 	</center>
