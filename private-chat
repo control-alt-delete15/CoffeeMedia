@@ -139,8 +139,8 @@ setInterval(nameLock, 50)
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li><a href="http://coffeemedia.cf">Home</a></li>
-           <li  class="active"><a href="/public-chat">Public Chat</a></li>
-
+           <li><a href="/public-chat">Public Chat</a></li>
+ <li class="active"><a href="">Private Chat</a></li>
       </li>
     
     </ul>
