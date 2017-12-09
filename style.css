@@ -119,8 +119,9 @@ div a[target=_blank] {
         
   
 }
-blockquote a[target=_blank] {
+blockquote a {
         opacity: 1;
+	color:blue;
 
   
 }
