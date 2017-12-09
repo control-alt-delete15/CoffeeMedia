@@ -12,6 +12,7 @@ div a[target=_blank] {
   
 }
 blockquote a[target=_blank] {
+	opacity: 1;
 	color: blue;
 
   
