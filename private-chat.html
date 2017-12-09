@@ -178,6 +178,18 @@ setInterval(nameLock, 50)
 	</script>
     <!-- customize labels of htmlcommentbox.com -->
 <script>
+	function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+	var page = getQueryVariable(chat);
+
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
 hcb_user = {
@@ -222,22 +234,11 @@ hcb_user = {
     err_denied:'Your post was not accepted.',
     /* SETTINGS */
     MAX_CHARS: 1000,
-    PAGE: getQueryVariable(chat), /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+    PAGE: page, /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
     ON_COMMENT: function(){hcb.make_comment_form()}, /* Function to call after commenting. */
     RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
-function getQueryVariable(variable)
-{
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
-}
-	document.getElementsByClassName("hcb-link del").innerHTML = '<button class="btn btn-danger btn-circle"><span class="glyphicon glyphicon-remove-circle"></span></button>';
-</script>
+	</script>
 
 		<!-- <textarea id="test01">
 	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Post</button>
