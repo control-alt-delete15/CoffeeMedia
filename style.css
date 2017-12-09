@@ -16,7 +16,9 @@ a[href="//www.htmlcommentbox.com"] {
 a[href="//www.htmlcommentbox.com/pricing.html"] { 
 	opacity:0;
 }
-
+a[href="//www.htmlcommentbox.com/account.html"] { 
+	opacity:0;
+}
 textarea {
 
    	border: none;
