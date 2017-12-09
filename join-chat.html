@@ -53,7 +53,7 @@
     <input type="text" class="form-control" id="chat" placeholder="Eg. 1234">
 	     
   </div>
-	       <button class="btn btn-success" onclick='window.open("http://coffeemedia.cf/private-chat?chat=" + document.getElementById("chat").value, _self);'>Join</button>
+	       <button class="btn btn-success" onclick='location.href = "http://coffeemedia.cf/private-chat?chat=" + btoa(document.getElementById("chat").value)'>Join</button>
 </form>
      
      
