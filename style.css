@@ -10,8 +10,12 @@
         opacity: 0;
   
 }
-
-
+a[href="//www.htmlcommentbox.com"] { 
+	color: red; 
+}
+a[href="//www.htmlcommentbox.com/pricing.html"] { 
+	color: red; 
+}
 
 textarea {
 
