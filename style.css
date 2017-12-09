@@ -6,17 +6,6 @@
 
 
 
-div a[target=_blank] {
-	opacity: 0;
-        
-  
-}
-blockquote a[target=_blank] {
-	opacity: 1;
-	color: blue;
-
-  
-}
 .home-desc {
         opacity: 0;
   
