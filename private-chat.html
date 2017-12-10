@@ -60,7 +60,7 @@ textarea:focus {
 </script>
   <link rel="shortcut icon" href="https://cdn.doordash.com/media/restaurant/cover/CoffeeTalk_190017_Chandler_AZ.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>CoffeeTalk</title>
+  <title id="title">CoffeeTalk</title>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -171,7 +171,8 @@ setInterval(nameLock, 50)
 	
 	function hideItem() {
 			document.getElementById('hcb_form_name').hidden = true;
-		   document.getElementById('hcb_msg').hidden = true;	
+		   document.getElementById('hcb_msg').hidden = true;
+		
 		
 	}
 	setInterval(hideItem, 50)
@@ -188,6 +189,7 @@ setInterval(nameLock, 50)
        }
        return(false);
 }
+	document.getElementById('title').innerHTML = "CoffeeTalk - " + atob(getQueryVariable('chat'));
 	var page = getQueryVariable('chat');
 
 /* This code goes ABOVE the main HTML Comment Box code!
