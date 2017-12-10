@@ -194,7 +194,7 @@ setInterval(nameLock, 50)
  replace the text in the single quotes below to customize labels.*/
 hcb_user = {
     /* L10N */
-    comments_header : 'Posts',
+    comments_header : atob(getQueryVariable('chat')),
     name_label : 'Guest',
     content_label: 'Enter your post here',
     submit : "Post",
