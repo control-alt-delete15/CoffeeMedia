@@ -188,7 +188,7 @@ setInterval(nameLock, 50)
        }
        return(false);
 }
-	var page = getQueryVariable(chat);
+	var page = getQueryVariable('chat');
 
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
@@ -234,7 +234,7 @@ hcb_user = {
     err_denied:'Your post was not accepted.',
     /* SETTINGS */
     MAX_CHARS: 1000,
-    PAGE: page, /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+    PAGE: getQueryVariable('chat'), /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
     ON_COMMENT: function(){hcb.make_comment_form()}, /* Function to call after commenting. */
     RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
