@@ -50,10 +50,15 @@
      <h3>Enter the chat code below to enter the chat</h3>
        <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-group"></i></span>
-    <input type="text" class="form-control" id="chat" placeholder="Eg. 1234">
+    <input type="text" class="form-control" id="chat" placeholder="Eg. Math Class">
 	     
   </div>
-	       <button class="btn btn-success" onclick='location.href = "http://coffeemedia.cf/private-chat?chat=" + btoa(document.getElementById("chat").value)'>Join</button>
+	            <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-group"></i></span>
+    <input type="text" class="form-control" id="pwrd" placeholder="Eg. 1234">
+	     
+  </div>
+	       <button class="btn btn-success" onclick='location.href = "http://coffeemedia.cf/private-chat?chat=" + btoa(document.getElementById("chat").value) + "&pwrd=" + btoa(document.getElementById("pwrd").value)'</button>
 </form>
      
      
