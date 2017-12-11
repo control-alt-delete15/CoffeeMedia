@@ -60,7 +60,7 @@
     <input type="password" class="form-control" id="pwrd" placeholder="Eg. 1234">
 	     
   </div>
-	       <button class="btn btn-success" onclick='location.href = "http://coffeemedia.cf/private-chat?chat=" + btoa(document.getElementById("chat").value) + "&pwrd=" + btoa(document.getElementById("pwrd").value)'>Join</button>
+	       <button class="btn btn-success" onclick='joinChat()'>Join</button>
 </form>
      
      
@@ -83,7 +83,16 @@
 	
 	}
 	setInterval(setUname, 500)
-	
+	function joinChat() {
+		
+		
+		location.href = 
+			"http://coffeemedia.cf/private-chat?chat=" 
+			+ btoa(document.getElementById("chat").value) + "&pwrd=" 
+			+ btoa(document.getElementById("pwrd").value);
+		
+		
+	}
          </script>
          <p></p>
          <!-- begin wwww.htmlcommentbox.com -->
