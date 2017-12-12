@@ -18,7 +18,7 @@
       <link rel="stylesheet" href="style.css">
 	    <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
    </head>
-   <body onload='document.getElementById("HCB_comment_box").hidden = true;'>
+   <body onload='document.getElementById("HCB_comment_box").hidden = true; saveChat();'>
       <body onload='document.getElementById("HCB_comment_box").hidden = true'>
          <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -61,7 +61,7 @@
 	     
   </div>
 	       <button class="btn btn-success" onclick='joinChat()'>Join</button>
-</form>
+	     <h3 id="chats">You havn't been to any chats yet.</chats>
      
      
      </div>
@@ -83,16 +83,33 @@
 	
 	}
 	setInterval(setUname, 500)
+		 
+		 
+		 function saveChat() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.chat) {
+            localStorage.chat = document.getElementById("chat").value;
+        } else {
+            localStorage.chat = "Your have not entered any chtas yet."; 
+        }
+        document.getElementById("chats").innerHTML = localStorage.chat;
+    } else {
+        document.getElementById("chats").innerHTML = "Error.";
+    }
+}
 	function joinChat() {
 		
 		
 		location.href = 
+			saveChat()
 			"http://coffeemedia.cf/private-chat?chat=" 
 			+ btoa(document.getElementById("chat").value) + "&pwrd=" 
 			+ btoa(document.getElementById("pwrd").value);
 		
 		
 	}
+		 
+		 
          </script>
          <p></p>
          <!-- begin wwww.htmlcommentbox.com -->
