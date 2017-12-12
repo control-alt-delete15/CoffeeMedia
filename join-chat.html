@@ -75,10 +75,9 @@
     }
 }
 	function joinChat() {
-		
+		saveChat();
 		
 		location.href = 
-			saveChat();
 			"http://coffeemedia.cf/private-chat?chat=" 
 			+ btoa(document.getElementById("chat").value) + "&pwrd=" 
 			+ btoa(document.getElementById("pwrd").value);
