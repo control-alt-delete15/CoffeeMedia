@@ -65,9 +65,9 @@
 		 function saveChat() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.chat) {
-            localStorage.chat = document.getElementById("chat").value;
+            localStorage.chat = localStorage.chat;
         } else {
-            localStorage.chat = "Your have not entered any chtas yet."; 
+            localStorage.chat = document.getElementById("chat").value; 
         }
         document.getElementById("chats").innerHTML = localStorage.chat;
     } else {
