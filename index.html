@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
    <head>
+	   <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCgsHlrQt4JDL6PiXytOatUzbBAE76Yj6k",
+    authDomain: "janet-fe89c.firebaseapp.com",
+    databaseURL: "https://janet-fe89c.firebaseio.com",
+    projectId: "janet-fe89c",
+    storageBucket: "janet-fe89c.appspot.com",
+    messagingSenderId: "985055758458"
+  };
+  firebase.initializeApp(config);
+	// Only authenticated users can read or write to the bucket
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+</script>
       <meta name="description" content="A user-friendly social network."
             <meta name="keywords" content="coffee, media, social network, social media">>
       <meta name="viewport" content="width=device-width, initial-scale=1">
