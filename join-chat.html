@@ -60,22 +60,9 @@
 	
 	}
 	setInterval(setUname, 500)
-		 
-		 
-		 function saveChat() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.chat) {
-            localStorage.chat = localStorage.chat;
-        } else {
-            localStorage.chat = document.getElementById("chat").value; 
-        }
-        document.getElementById("chats").innerHTML = localStorage.chat;
-    } else {
-        document.getElementById("chats").innerHTML = "Error.";
-    }
-}
+
 	function joinChat() {
-		saveChat();
+		
 		
 		location.href = 
 			"http://coffeemedia.cf/private-chat?chat=" 
