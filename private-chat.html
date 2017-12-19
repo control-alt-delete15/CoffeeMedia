@@ -102,7 +102,7 @@ setInterval(nameLock, 50)
 }
 }
 </style>
-<body onload="document.getElementById('hcb_form_name').hidden = true">
+<body onload="document.getElementById('HCB_comment_form_box').hidden = true;">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
 <div class="navbar-header">
@@ -131,6 +131,21 @@ setInterval(nameLock, 50)
     </ul>
 	  </div>
   </div>
+</nav>
+	
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+
+
+   <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search" id="test01">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit" onclick="post(document.getElementById('test01').value)">
+        Post
+      </button>
+    </div>
+  </div>
+    </div>
 </nav>
 <script>
 	
@@ -239,11 +254,15 @@ hcb_user = {
 		 <input id="test01" class="form-control" style="width:50%;">
 		</div>
 
-	<script>function post(content) {
-			if (content != "") {
-  	document.getElementById('hcb_form_content').value = document.getElementById('hcb_form_content').value + " <b>#" + content + "</b>";
-			}
-}</script>
+	</script>
+<!-- end www.htmlcommentbox.com -->
+	<script>function post( info) {
+  document.getElementById('hcb_form_content').value = info;
+  document.getElementById('hcb_submit').click();
+  location.reload();
+}
+
+</script>
  <div id="HCB_comment_box"></div>
 	</center>
 
