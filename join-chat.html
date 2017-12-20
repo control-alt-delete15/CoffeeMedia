@@ -66,13 +66,24 @@
 		
 		location.href = 
 			"http://coffeemedia.cf/private-chat?chat=" 
-			+ btoa(document.getElementById("chat").value) + "&pwrd=" 
+			+ btoa(document.getElementById("chat").value) 
+			+ "&pwrd=" 
 			+ btoa(document.getElementById("pwrd").value);
 		
 		
 	}
 		 
-		 
+		function addChat() {
+		
+		
+		var chat = 
+			"http://coffeemedia.cf/private-chat?chat=" 
+			+ btoa(document.getElementById("chat").value) 
+			+ "&pwrd=" 
+			+ btoa(document.getElementById("pwrd").value);
+		
+		document.getElementById("pre").innerHTML = '<iframe src="' + chat + '" height="200" width="300"></iframe>';
+	}	 
          </script>
      <div class="jumbotron">
      <h3>Enter the chat code below to enter the chat</h3>
@@ -88,9 +99,11 @@
     <input type="password" class="form-control" id="pwrd" placeholder="Eg. 1234">
 	     
   </div>
-	       <button class="btn btn-success" onclick='joinChat()'>Join</button>
-	     <h3 id="chats">You havn't been to any chats yet.</chats>
-     
+	       <button class="btn btn-success" onclick='joinChat()'>Join Chat</button>
+	     <button class="btn btn-success" onclick='addChat()'>Add to my Website</button>
+	     <p>Copy
+	     <pre id="pre"></pre>
+	     </p>
      
      </div>
 
