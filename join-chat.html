@@ -82,7 +82,7 @@
 			+ "&pwrd=" 
 			+ btoa(document.getElementById("pwrd").value);
 		
-		document.getElementById("pre").innerHTML = '<iframe src="' + chat + '" height="200" width="300"></iframe>';
+		document.getElementById("pre").innerHTML = '<div><span style="color:brown"><span style="color:mediumblue">&lt;</span>iframe<span style="color:red"> src<span style="color:mediumblue">="' + chat + '"</span> height<span style="color:mediumblue">="200"</span> width<span style="color:mediumblue">="300"</span></span><span style="color:mediumblue">&gt;</span></span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/iframe<span style="color:mediumblue">&gt;</span></span> </div>';
 	}	 
          </script>
      <div class="jumbotron">
@@ -99,8 +99,9 @@
     <input type="password" class="form-control" id="pwrd" placeholder="Eg. 1234">
 	     
   </div>
+	     <br>
 	       <button class="btn btn-success" onclick='joinChat()'>Join Chat</button>
-	     <button class="btn btn-success" onclick='addChat()'>Add to my Website</button>
+	     <button class="btn btn-success" onclick='addChat()'>Add chat to my Website</button>
 	     <p>Copy
 	     <pre id="pre"></pre>
 	     </p>
