@@ -155,6 +155,7 @@ setInterval(nameLock, 50)
 		document.getElementById("Username").innerHTML = "<a ><b>" + document.getElementById("hcb_form_name").value + "</b></a>"
 		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat'> Logout</a>";
 			    var Username = document.getElementById("hcb_form_name").value; 
+			    document.getElementById('hcb_form_website').value = "http://coffeemedia.cf/profile?user=" + Username;
 	}
 	
 	}
@@ -165,7 +166,7 @@ setInterval(nameLock, 50)
 			document.getElementById('hcb_form_name').hidden = true;
 		   document.getElementById('hcb_msg').hidden = true;	
 		var Username = document.getElementById("hcb_form_name").value;
-		
+		document.getElementById('hcb_form_website').hidden = true;	
 		
 		if (Username = 'henrybookmail') {
 			document.getElementById("hcb_submit").hidden = true;
