@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <style> 
+		 .input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}
+		 .up {
+		background-image: url("https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/upload.png");	 
+			 
+			 
+		 }
+textarea {
+ width: 50%;
+   	border: none;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+   
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+         
+        border: none;
+   border-bottom: 2px solid green;
+           border-top: 2px solid green;
+           border-left: 2px solid green;
+            border-right: 2px solid green;
+    outline:none;
+}
+textarea:focus {
+    width: 100%;
+        border: none;
+    border-bottom: 2px solid green;
+        border-top: 2px solid green;
+           border-left: 2px solid green;
+           border-right: 2px solid green;
+}
+</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="https://cdn.doordash.com/media/restaurant/cover/CoffeeTalk_190017_Chandler_AZ.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title id="title">CoffeeTalk</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    function nameLock() {
+	    
+      if (localStorage.logged == true){
+        document.getElementById('hcb_form_name').value = localStorage.username;
+	      
+    }
+document.getElementById('hcb_form_name').disabled = true;    }
+setInterval(nameLock, 50)
+  </script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<style>
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+.active {
+    background-color: #4CAF50; /* 	fa fa-address-bookAdd an active/current color */
+}
+}
+</style>
+<body onload="document.getElementById('HCB_comment_form_box').hidden = true;">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+<div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://coffeemedia.cf">CoffeeMedia</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="http://coffeemedia.cf">Home</a></li>
+           <li><a href="/public-chat">Public Chat</a></li>
+ <li class="active"><a href="">CoffeeTalk</a></li>
+      </li>
+    
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right" >
+      <li id="Username"></li>
+      <li id="Logout"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&state=http%3A//coffeemedia.cf/public-chat&redirect_uri=http%3A//www.htmlcommentbox.com%2Foauth2callback&response_type=code&client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&approval_prompt=force"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+	  </div>
+  </div>
+</nav>
+	
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+
+
+   <div class="input-group">
+    <input type="text" class="form-control" placeholder="Enter Post here" id="test01">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit" onclick="post(document.getElementById('test01').value)">
+        Post
+      </button>
+	
+    </div>
+  </div>
+    </div>
+</nav>
+<script>
+	
+	function setUname() {
+		if (document.getElementById("hcb_form_name").value == "") 
+		{
+		    }
+		    else {
+			
+		document.getElementById("Username").innerHTML = "<a ><b>" + document.getElementById("hcb_form_name").value + "</b></a>"
+		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat'> Logout</a>";
+			    var Username = document.getElementById("hcb_form_name").value; 
+            document.getElementById('hcb_form_website').value = "http://coffeemedia.cf/profile?user=" + Username;
+	}
+	
+	}
+	setInterval(setUname, 500)
+	
+	
+	function hideItem() {
+			document.getElementById('hcb_form_name').hidden = true;
+		   document.getElementById('hcb_msg').hidden = true;
+       document.getElementById('hcb_form_website').hidden = true;
+		
+		
+	}
+	setInterval(hideItem, 50)
+	</script>
+    <!-- customize labels of htmlcommentbox.com -->
+<script>
+	function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+	document.getElementById('title').innerHTML = "CoffeeTalk - " + atob(getQueryVariable('chat'));
+	var page = getQueryVariable('chat');
+/* This code goes ABOVE the main HTML Comment Box code!
+ replace the text in the single quotes below to customize labels.*/
+hcb_user = {
+    /* L10N */
+    comments_header : getQueryVariable('user'),
+    name_label : 'Guest',
+    content_label: 'Enter your post here',
+    submit : "Post",
+    logout_link : '<img title="log out" src="//www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon"/>',
+    admin_link : '<img src="//www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon"/>',
+    no_comments_msg: '',
+    add:'Add your post',
+    again: '<button class="submit btn">Post again</button>',
+    rss:'<img src="//www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
+    said:'said:',
+    prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+    next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+    showing:'Showing',
+    to:'to',
+    website_label:'website (optional)',
+    email_label:'email',
+    anonymous:'Guest',
+    mod_label:'ADMIN',
+    subscribe:'subscribe',
+    are_you_sure:'Do you want to report this post?',
+    reply:'<button class="btn icon-btn btn-info"><span class="glyphicon btn-glyphicon glyphicon-share img-circle text-info"></span>Reply</button>',
+    flag:'<button class="btn icon-btn btn-danger"><span class="glyphicon btn-glyphicon glyphicon-trash img-circle text-danger"></span>Report</button>',
+    like:'<button class="btn icon-btn btn-success"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-success"></span>Like</button>',
+    
+    /* dates */
+    days_ago:'days ago',
+    hours_ago:'hour ago',
+    minutes_ago:'minutes ago',
+    within_the_last_minute:'within the last minute',
+    msg_thankyou:'Thank you for posting!',
+    msg_approval:'(this post is not published until approved)',
+    msg_approval_required:'Thank you for post! Your comment will appear once approved by a moderator.',
+    err_bad_html:'Your comment contained bad html.',
+    err_bad_email:'Please enter a valid email address.',
+    err_too_frequent:'You must wait a few seconds between posting.',
+    err_comment_empty:'Your post was not posted because it was empty!',
+    err_denied:'Your post was not accepted.',
+    /* SETTINGS */
+    MAX_CHARS: 1000,
+    PAGE: getQueryVariable('user'), /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+    ON_COMMENT: function(){hcb.make_comment_form()}, /* Function to call after commenting. */
+    RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+};
+	</script>
+
+		<!-- <textarea id="test01">
+	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Post</button>
+	<script>function post(content) {
+  document.getElementById('hcb_form_content').value = content;
+  document.getElementById('hcb_submit').click();
+  location.reload();
+}</script> -->
+<!-- done customizing labels of htmlcommentbox.com -->
+<!-- begin wwww.htmlcommentbox.com -->
+	<center>
+		<hr><hr>
+		<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+		 <div class="input-group">
+   	<span class="btn input-group-addon success" onclick="post(document.getElementById('test01').value)"><i class="glyphicon glyphicon-tag"></i></span>
+		 <input id="test01" class="form-control" style="width:50%;">
+		</div>
+
+	</script>
+<!-- end www.htmlcommentbox.com -->
+	<script>function post( info) {
+  document.getElementById('hcb_form_content').value = info;
+  document.getElementById('hcb_submit').click();
+  location.reload();
+}
+</script>
+
+	</center>
+
+	<style>
+		label {
+			content: '<button class="btn btn-success">Upload Image</button>';
+			
+		}
+ 	.submit {
+ display: inline-block;
+padding: 9px 12px;
+padding-top: 7px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 20px;
+color: #5e5e5e;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-color: #d1dade;
+-webkit-border-radius: 3px;
+-webkit-border-radius: 3px;
+-webkit-border-radius: 3px;
+background-image: none !important;
+border: none;
+text-shadow: none;
+box-shadow: none;
+transition: all 0.12s linear 0s !important;
+font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+		color: #fff;
+background-color: #5cb85c;
+border-color: #4cae4c;
+  }
+	</style>
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=17758&num=50&ts=1513814224279");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com --> </body>
+</html>
