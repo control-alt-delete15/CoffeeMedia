@@ -53,7 +53,7 @@ textarea:focus {
 
   <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>CoffeeMedia</title>
+  <title id="title">CoffeeMedia</title>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -184,13 +184,14 @@ setInterval(nameLock, 50)
        }
        return(false);
 }
+	
 	document.getElementById('title').innerHTML = "CoffeeMedia - " + getQueryVariable('user');
 	
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
 hcb_user = {
     /* L10N */
-    comments_header : getQueryVariable('user') + "'s profile",
+    comments_header : getQueryVariable('user')+"'s profile",
     name_label : 'Guest',
     content_label: 'Enter your post here',
     submit : "Post",
