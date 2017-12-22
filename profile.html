@@ -163,11 +163,13 @@ setInterval(nameLock, 50)
 		var Username = document.getElementById("hcb_form_name").value;
 		document.getElementById('hcb_form_website').hidden = true;	
 		
-		if (Username = 'henrybookmail') {
+		if (Username == 'henrybookmail') {
 			document.getElementById("hcb_submit").hidden = true;
 			
 			
 		}
+		if(document.getElementById("hcb_form_name").value == ){
+		   }
 		
 	}
 	setInterval(hideItem, 50)
@@ -186,6 +188,9 @@ setInterval(nameLock, 50)
 }
 	
 	document.getElementById('title').innerHTML = "CoffeeMedia - " + getQueryVariable('user');
+	if(document.getElementById("hcb_form_name").value != getQueryVariable('user')){
+		document.getElementById("HCB_comment_form_box").style = "display:none;";
+		   }
 	
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
@@ -273,8 +278,8 @@ hcb_user = {
 			}
 }</script>
 <!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=17758&num=50&ts=1513814224279");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=17758&num=1&ts=1513904074104");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
 	</center>
  </body>
