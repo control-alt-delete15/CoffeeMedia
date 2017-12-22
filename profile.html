@@ -108,7 +108,7 @@ setInterval(nameLock, 50)
 }
 }
 </style>
-<body onload="document.getElementById('hcb_form_name').hidden = true; document.getElementById("hcb_form_name").style = 'display:none;';">
+<body onload="document.getElementById('hcb_form_name').hidden = true; document.getElementById("hcb_form_name").style = 'display:none;'; compareUname(document.getElementById("hcb_form_name").value, getQueryVariable('user'));">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
 <div class="navbar-header">
@@ -186,7 +186,14 @@ setInterval(nameLock, 50)
 		function compareUname(uname, user) {
 	if (uname == user)	{
 		document.getElementById('post').style = "display:block;";
+		document.getElementById('post').innerHTML = document.getElementsByTagName("blockquote");
 	    	}
+	else 	{
+		document.getElementById('secondary').innerHTML = document.getElementsByTagName("blockquote");
+		
+		}
+			document.getElementById('name').innerHTML = getQueryVariable('user')+"'s profile";
+				
 	    }
 	</script>
     <!-- customize labels of htmlcommentbox.com -->
@@ -283,9 +290,11 @@ hcb_user = {
 		 <input id="test01" class="form-control" style="width:50%;">
 		</div>
 		</center>-->
+		<h3 id="name"></h3>
+		<div class="container" id="secondary"></div>
 		<div id="post" style="display:none;">
-	<input id="test01">
-	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Update Profile</button>
+			<textarea id="test01"></textarea>
+	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Update Bio</button>
 	<script>function post(content) {
   document.getElementById('hcb_form_content').value = content;
   document.getElementById('hcb_submit').click();
