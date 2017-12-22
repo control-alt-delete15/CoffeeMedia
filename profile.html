@@ -108,7 +108,7 @@ setInterval(nameLock, 50)
 }
 }
 </style>
-<body onload="document.getElementById('hcb_form_name').hidden = true">
+<body onload="document.getElementById('hcb_form_name').hidden = true; document.getElementById("hcb_form_name").style = 'display:none;';">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
 <div class="navbar-header">
@@ -189,12 +189,9 @@ setInterval(nameLock, 50)
 	document.getElementById('title').innerHTML = "CoffeeMedia - " + getQueryVariable('user');
 	
 	if(document.getElementById("hcb_form_name").value == getQueryVariable('user')) {
-		//document.getElementById("HCB_comment_form_box").style = "display:none;";
+		document.getElementById("HCB_comment_form_box").style = "display:block;";
 		   }
-	else {
-	document.getElementById("HCB_comment_form_box").style = "display:none;";	
-		
-	}
+	
 	
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
