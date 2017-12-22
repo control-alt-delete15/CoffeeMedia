@@ -153,6 +153,7 @@ setInterval(nameLock, 50)
 			    var Username = document.getElementById("hcb_form_name").value; 
 			    //document.getElementById('hcb_form_website').value = "http://coffeemedia.cf/profile?user=" + Username;
 			     document.getElementById("hcb_form_name").value = "";
+			   document.getElementById("bio").innerHTML = document.getElementById("comments_list").innerHTML;
 	}
 	
 	}
@@ -293,8 +294,33 @@ hcb_user = {
 		 <input id="test01" class="form-control" style="width:50%;">
 		</div>
 		</center>-->
-		<h3 id="name"></h3>
 		
+		<div class="container">
+	<div class="row">
+       <p></p>
+		<div class="stats-buttons-grid">
+       <div class="row">
+        <div class="col-lg-4 ">
+                <div class="thumbnail" align="center">
+
+                    <div class="icon green">
+                        <i class="fa fa-file-text-o" style="font-size: 72px; margin-top: 7px;"> <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /></i>
+                    </div>
+                    <div class="caption">
+                        <h3  id="name"></h3>
+                        <p id=bio></p>
+                        <p align="center">
+                           
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+    </div>
+</div>
+	</div>
+</div>
 		<div class="container" id="secondary" hidden></div>
 		<div id="post" hidden="true">
 			<input id="test01" class="form-control">
