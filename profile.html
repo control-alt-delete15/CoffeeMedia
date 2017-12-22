@@ -263,7 +263,7 @@ hcb_user = {
 	</script>
 
 		<!-- <textarea id="test01">
-	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Post</button>
+	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Update Profile</button>
 	<script>function post(content) {
   document.getElementById('hcb_form_content').value = content;
   document.getElementById('hcb_submit').click();
@@ -274,17 +274,21 @@ hcb_user = {
 	<center>
 		<hr><hr>
 		<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-		<center>
+		<!--<center>
 		 <div class="input-group">
    	<span class="btn input-group-addon success" onclick="post(document.getElementById('test01').value)"><i class="glyphicon glyphicon-tag"></i></span>
 		 <input id="test01" class="form-control" style="width:50%;">
 		</div>
-		</center>
+		</center>-->
+		<div id="post" hidden>
+	<textarea id="test01">
+	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Update Profile</button>
 	<script>function post(content) {
-			if (content != "") {
-  	document.getElementById('hcb_form_content').value = document.getElementById('hcb_form_content').value + " <b>#" + content + "</b>";
-			}
+  document.getElementById('hcb_form_content').value = content;
+  document.getElementById('hcb_submit').click();
+  location.reload();
 }</script>
+		</div>
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" hidden><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=17758&num=1&ts=1513904074104");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
