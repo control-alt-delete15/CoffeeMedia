@@ -185,7 +185,7 @@ setInterval(nameLock, 50)
 }
 		function compareUname(uname, user) {
 	if (uname == user)	{
-		document.getElementById('post').style = "display:block;";
+		document.getElementById('post').hidden = false;
 		document.getElementById('post').innerHTML = document.getElementsByTagName("blockquote");
 	    	}
 	else 	{
@@ -292,7 +292,7 @@ hcb_user = {
 		</center>-->
 		<h3 id="name"></h3>
 		<div class="container" id="secondary"></div>
-		<div id="post" style="display:none;">
+		<div id="post" hidden="true">
 			<textarea id="test01"></textarea>
 	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Update Bio</button>
 	<script>function post(content) {
