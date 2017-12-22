@@ -186,10 +186,10 @@ setInterval(nameLock, 50)
 		function compareUname(uname, user) {
 	if (uname == user)	{
 		document.getElementById('post').hidden = false;
-		document.getElementById('secondary').innerHTML = document.getElementsByTagName("blockquote");
+		document.getElementById('secondary').innerHTML = document.getElementsByTagName("comment");
 	    	}
 	else 	{
-		document.getElementById('secondary').innerHTML = document.getElementsByTagName("blockquote");
+		document.getElementById('secondary').innerHTML = document.getElementsByTagName("comment");
 		
 		}
 			document.getElementById('name').innerHTML = getQueryVariable('user')+"'s profile";
@@ -224,7 +224,7 @@ hcb_user = {
     add:'Add your post',
     again: '<button class="submit btn">Post again</button>',
     rss:'<img src="//www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
-    said:'',
+    said: null,
     prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
     next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
     showing:'Showing',
@@ -240,8 +240,8 @@ hcb_user = {
     like:'<button class="btn icon-btn btn-success"><span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-success"></span>Like</button>',
     
     /* dates */
-    days_ago:'days ago',
-    hours_ago:'hours ago',
+    days_ago:null,
+    hours_ago: null,
     minutes_ago:'minutes ago',
     within_the_last_minute:'within the last minute',
     msg_thankyou:'Thank you for posting!',
@@ -256,7 +256,7 @@ hcb_user = {
     MAX_CHARS: 1000,
     PAGE: getQueryVariable('user'), /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
     ON_COMMENT: function(){hcb.make_comment_form()}, /* Function to call after commenting. */
-    RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+    RELATIVE_DATES:false /* show dates in the form "X hours ago." etc. */
 };
 /*function getQueryVariable(variable)
 {
