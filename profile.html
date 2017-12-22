@@ -168,8 +168,7 @@ setInterval(nameLock, 50)
 			
 			
 		}
-		if(document.getElementById("hcb_form_name").value == ){
-		   }
+		
 		
 	}
 	setInterval(hideItem, 50)
@@ -188,9 +187,14 @@ setInterval(nameLock, 50)
 }
 	
 	document.getElementById('title').innerHTML = "CoffeeMedia - " + getQueryVariable('user');
-	if(document.getElementById("hcb_form_name").value != getQueryVariable('user')){
-		document.getElementById("HCB_comment_form_box").style = "display:none;";
+	
+	if(document.getElementById("hcb_form_name").value == getQueryVariable('user')) {
+		//document.getElementById("HCB_comment_form_box").style = "display:none;";
 		   }
+	else {
+	document.getElementById("HCB_comment_form_box").style = "display:none;";	
+		
+	}
 	
 /* This code goes ABOVE the main HTML Comment Box code!
  replace the text in the single quotes below to customize labels.*/
