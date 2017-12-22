@@ -186,10 +186,10 @@ setInterval(nameLock, 50)
 		function compareUname(uname, user) {
 	if (uname == user)	{
 		document.getElementById('post').hidden = false;
-		document.getElementById('secondary').innerHTML = document.getElementsByTagName("comment");
+		document.getElementById('secondary').innerHTML = document.getElementsByClassName("comment").innerHTML;
 	    	}
 	else 	{
-		document.getElementById('secondary').innerHTML = document.getElementsByTagName("comment");
+		document.getElementById('secondary').innerHTML = document.getElementsByClassName("comment").innerHTML;
 		
 		}
 			document.getElementById('name').innerHTML = getQueryVariable('user')+"'s profile";
@@ -224,11 +224,11 @@ hcb_user = {
     add:'Add your post',
     again: '<button class="submit btn">Post again</button>',
     rss:'<img src="//www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
-    said: null,
+    said: '',
     prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
     next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
-    showing:'Showing',
-    to:'to',
+    showing:'',
+    to:'',
     website_label:'website (optional)',
     email_label:'email',
     anonymous:'Guest',
@@ -303,7 +303,7 @@ hcb_user = {
 		</div>
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box" hidden><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ 
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=1366&num=1&ts=1513952309226");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
 	</center>
