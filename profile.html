@@ -149,7 +149,7 @@ setInterval(nameLock, 50)
 		document.getElementById("Logout").innerHTML = "<a href='http://htmlcommentbox.com/logout?then=http://coffeemedia.cf/public-chat'> Logout</a>";
 			    var Username = document.getElementById("hcb_form_name").value; 
 			    //document.getElementById('hcb_form_website').value = "http://coffeemedia.cf/profile?user=" + Username;
-			     document.getElementById("hcb_form_name").value = "";
+			     
 			   document.getElementById("bio").innerHTML = document.getElementById("comments_list").innerHTML;
 	
 	
@@ -325,6 +325,7 @@ hcb_user = {
 	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Update Bio</button>
 	<script>function post(content) {
   document.getElementById('hcb_form_content').value = content;
+  document.getElementById("hcb_form_name").value = "";
   document.getElementById('hcb_submit').click();
   location.reload();
 }</script>
