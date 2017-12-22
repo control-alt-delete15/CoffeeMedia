@@ -78,10 +78,7 @@
 		
 		
 		var chat = 
-			"http://coffeemedia.cf/custom-chat?chat=" 
-			+ btoa(document.getElementById("chat").value) 
-			+ "&pwrd=" 
-			+ btoa(document.getElementById("pwrd").value);
+			"http://coffeemedia.cf/custom-chat?chat=" + btoa(document.getElementById("chat").value) + "&pwrd=" + btoa(document.getElementById("pwrd").value);
 		document.getElementById("sample").innerHTML = '<iframe src="' + chat + '" height="500" width="500"></iframe>';
 		document.getElementById("pre").innerHTML = '<div><span style="color:brown"><span style="color:mediumblue">&lt;</span>iframe<span style="color:red"> src<span style="color:mediumblue">="' + chat + '"</span> height<span style="color:mediumblue">="500"</span> width<span style="color:mediumblue">="500"</span></span><span style="color:mediumblue">&gt;</span></span><span style="color:brown"><span style="color:mediumblue">&lt;</span>/iframe<span style="color:mediumblue">&gt;</span></span> </div>';
 	}	 
