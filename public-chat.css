@@ -1,0 +1,41 @@
+		 .input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}
+		 .up {
+		background-image: url("https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/upload.png");	 
+			 
+			 
+		 }
+textarea {
+ width: 50%;
+   	border: none;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+   
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+         
+        border: none;
+   border-bottom: 2px solid green;
+           border-top: 2px solid green;
+           border-left: 2px solid green;
+            border-right: 2px solid green;
+    outline:none;
+}
+
+textarea:focus {
+    width: 100%;
+        border: none;
+    border-bottom: 2px solid green;
+        border-top: 2px solid green;
+           border-left: 2px solid green;
+           border-right: 2px solid green;
+}
