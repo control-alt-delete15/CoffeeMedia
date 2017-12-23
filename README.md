@@ -8,4 +8,4 @@ CoffeeMedia is an easy to use, user-friendly, social networking site. It has [Go
 - [x] PMing and public chatting
 - [x] Everything a good social network needs
 ## How to get there
-Visit us at [CoffeeMedia](coffeemedia.cf)
+Visit us at [CoffeeMedia](http://coffeemedia.cf)
