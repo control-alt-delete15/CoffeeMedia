@@ -42,6 +42,62 @@ textarea:focus {
            border-left: 2px solid green;
            border-right: 2px solid green;
 }
+		 @grey: #e5e5ea;
+@blue: #1289fe;
+
+body {
+  background: white;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+blockquote {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+p {
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: @grey;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+  
+  &.them {
+    float: left;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      left: -0.5em;
+      bottom: 0;
+      width: 0.5em;
+      height: 1em;
+      border-right: 0.5em solid @grey;
+      border-bottom-right-radius: 1em 0.5em;
+    }
+  }
+  
+  &.me {
+    float: right;
+    background-color: @blue;
+    color: white;
+   
+    &::after {
+      content: "";
+      position: absolute;
+      right: -0.5em;
+      bottom: 0;
+      width: 0.5em;
+      height: 1em;
+      border-left: 0.5em solid @blue;
+      border-bottom-left-radius: 1em 0.5em;
+    }
+  }
+}
+
+
 </style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -67,6 +123,15 @@ textarea:focus {
     }
 document.getElementById('hcb_form_name').disabled = true;    }
 setInterval(nameLock, 50)
+	
+	function checkEnter() {
+		$(".comment").addClass('them');
+	$(".comment:contains(" + document.getElementById('hcb_form_name').value + ").addClass('me');
+$(".hcb-comment-tb").removeClass('hcb-comment-tb');
+$('.inputfile').removeClass('inputfile');
+$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass('btn').addClass('btn-success');
+	}
+	setInterval(checkEnter, 0)
 
   </script>
 <link rel="stylesheet" href="style.css">
@@ -265,7 +330,7 @@ hcb_user = {
 }
 
 </script>
- <div id="HCB_comment_box"></div>
+ <div id="HCB_comment_box" class="chat"></div>
 	</center>
 
 	<style>
