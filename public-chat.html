@@ -33,7 +33,7 @@
 	      
     }
 document.getElementById('hcb_form_name').disabled = true;    }
-setInterval(nameLock, 50)
+setInterval(nameLock, 0)
 	 
 
   </script>
@@ -133,7 +133,18 @@ setInterval(nameLock, 50)
 		}
 		
 	}
-	setInterval(hideItem, 50)
+	setInterval(hideItem, 0)
+	
+	function checkEnter() {
+	    $(document).ready(function(){
+    $("textarea").keydown(function(event){
+        if (event.keyCode == 13) {
+         document.getElementById('hcb_submit').click();
+        }
+       });
+    });
+	}
+	setInterval(checkEnter, 0)
 	</script>
     <!-- customize labels of htmlcommentbox.com -->
 <script>
