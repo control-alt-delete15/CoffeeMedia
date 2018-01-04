@@ -108,7 +108,7 @@ setInterval(nameLock, 50)
 }
 }
 </style>
-<body onload="document.getElementById('hcb_form_name').hidden = true; compareUname(document.getElementById('hcb_form_name').value, getQueryVariable('user'));">
+<body onload="document.getElementById('hcb_form_name').hidden = true; compareUname(document.getElementById('hcb_form_name').value, getQueryVariable('user')); document.getElementById("bio").innerHTML = document.getElementById("comments_list").innerHTML;">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
 <div class="navbar-header">
