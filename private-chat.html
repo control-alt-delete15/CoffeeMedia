@@ -118,7 +118,9 @@ document.getElementById('hcb_form_name').disabled = true;    }
 setInterval(nameLock, 50)
 	
 	function checkEnter() {
+		var name = document.getElementById('hcb_form_name').value;
 		$(".comment").addClass('them');
+		jQuery('.comment:has(a:contains("' + name + '"))').addClass('me').removeClass('them');
 		$(".hcb-comment-tb").removeClass('hcb-comment-tb');
 		$('.inputfile').removeClass('inputfile');
 		$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass('btn').addClass('btn-success');
