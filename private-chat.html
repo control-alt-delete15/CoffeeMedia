@@ -119,10 +119,9 @@ setInterval(nameLock, 50)
 	
 	function checkEnter() {
 		$(".comment").addClass('them');
-	$(".comment:contains(" + document.getElementById('hcb_form_name').value + ").addClass('me');
-$(".hcb-comment-tb").removeClass('hcb-comment-tb');
-$('.inputfile').removeClass('inputfile');
-$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass('btn').addClass('btn-success');
+		$(".hcb-comment-tb").removeClass('hcb-comment-tb');
+		$('.inputfile').removeClass('inputfile');
+		$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass('btn').addClass('btn-success');
 	}
 	setInterval(checkEnter, 0)
 
