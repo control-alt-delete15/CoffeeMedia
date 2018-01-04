@@ -150,7 +150,7 @@ setInterval(nameLock, 50)
 			    var Username = document.getElementById("hcb_form_name").value; 
 			    //document.getElementById('hcb_form_website').value = "http://coffeemedia.cf/profile?user=" + Username;
 			     
-			   document.getElementById("bio").innerHTML = document.getElementById("comments_list").innerHTML;
+			   
 	
 	
 	}
@@ -163,7 +163,8 @@ setInterval(nameLock, 50)
 		var Username = document.getElementById("hcb_form_name").value;
 		document.getElementById('hcb_form_website').hidden = true;
 		document.getElementById('HCB_comment_form_box').hidden = true;
-		
+		document.getElementById("bio").innerHTML = document.getElementById("comments_list").innerHTML;
+		document.getElementById("HCB_comment_box").hidden = "true";
 		if (Username == 'henrybookmail') {
 			document.getElementById("hcb_submit").hidden = true;
 			
@@ -172,7 +173,7 @@ setInterval(nameLock, 50)
 		
 		
 	}
-	setInterval(hideItem, 50)
+	setInterval(hideItem, 0)
 	
 	function getQueryVariable(variable)
 {
@@ -238,7 +239,7 @@ hcb_user = {
     are_you_sure:'Do you want to report this post?',
     reply:'',
     flag:'',
-    like:'<button type="button" class="btn btn-success btn-circle btn-lg"><i class="fa fa-coffee"></i></button>',
+    like:'',
     
     /* dates */
     days_ago:null,
@@ -321,8 +322,10 @@ hcb_user = {
 		</center>
 		<div class="container" id="secondary" hidden></div>
 		<div id="post" hidden="true">
-			<input id="test01" class="form-control">
-	<button class="btn btn-success" onclick="post(document.getElementById('test01').value)">Update Bio</button>
+			<b>Nickname:</b><input id="test01" class="form-control">
+			<b>Birthday:</b><input id="test02" class="form-control">
+			<b>Bio:</b><input id="test03" class="form-control">
+			<button class="btn btn-success" onclick="post('<b>Nickname:</b>' + document.getElementById('test01').value + '<p></p>' + '<b>Birthday:</b>' + document.getElementById('test02').value + '<p></p>' + '<b>Bio:</b>' + document.getElementById('test03').value + '<p></p>')">Update Info</button>
 	<script>function post(content) {
   document.getElementById('hcb_form_content').value = content;
   document.getElementById("hcb_form_name").value = "";
@@ -331,10 +334,9 @@ hcb_user = {
 }</script>
 		</div>
 
-	
 <!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box" hidden><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24PAz.8lCyp12HpFIyDIEzy%2F"+"&opts=274&num=1&ts=1513969023648");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com" hidden="true"></div>
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=274&num=1&ts=1515092713310");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
 		</center>
  </body>
