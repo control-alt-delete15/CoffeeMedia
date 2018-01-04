@@ -125,7 +125,7 @@ textarea:focus {
 
 
 
-/*.navbar-default {
+.navbar-default {
   background-color: #77b659;
   border-color: #13781f;
 }
@@ -209,20 +209,20 @@ textarea:focus {
   }
 }
 	}
-*/
+
 
 body {
 	font-family: "Lato", sans-serif;
-    /* The image used */
+    /* The image used 
     background-image: url("https://image.freepik.com/free-vector/illustration-of-the-house-in-winter-with-mountain-design-paper-art-and-crafts_3589-45.jpg");
 
-    /* Full height */
+    /* Full height 
     height: 100%; 
 
-    /* Center and scale the image nicely */
+    /* Center and scale the image nicely
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
 }
 .sidenav {
     height: 100%;
@@ -281,7 +281,7 @@ body, html {
     background-size: cover;
 }
 
-.navbar-default {
+/*.navbar-default {
   background-color: #c31a12;
   border-color: #870202;
 }
@@ -347,7 +347,7 @@ body, html {
 }
 .navbar-default .navbar-link:hover {
   color: #24dd0f;
-}
+}*/
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
