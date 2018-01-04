@@ -136,13 +136,11 @@ setInterval(nameLock, 0)
 	setInterval(hideItem, 0)
 	
 	function checkEnter() {
-	    $(document).ready(function(){
-    $("textarea").keydown(function(event){
-        if (event.keyCode == 13) {
-         document.getElementById('hcb_submit').click();
-        }
-       });
-    });
+
+	$(".comment").addClass('well');
+$(".hcb-comment-tb").removeClass('hcb-comment-tb');
+$('.inputfile').removeClass('inputfile');
+$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass('btn').addClass('btn-success');
 	}
 	setInterval(checkEnter, 0)
 	</script>
@@ -200,10 +198,6 @@ hcb_user = {
     ON_COMMENT: function(){hcb.make_comment_form()}, /* Function to call after commenting. */
     RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
-	$(".comment").addClass('well');
-$(".hcb-comment-tb").removeClass('hcb-comment-tb');
-$('.inputfile').removeClass('inputfile');
-$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass('btn').addClass('btn-success');
 /*function getQueryVariable(variable)
 {
        var query = window.location.search.substring(1);
