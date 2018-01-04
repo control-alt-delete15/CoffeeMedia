@@ -157,15 +157,21 @@ setInterval(nameLock, 50)
 	}
 	setInterval(setUname, 500)
 	
-	
+	function compareUname(uname, user) {
+	if (uname == user)	{
+		document.getElementById('post').hidden = false;
+		
+	    	}
+	}
+			
+		
 	function hideItem() {
 			document.getElementById('hcb_form_name').hidden = true;
 		   document.getElementById('hcb_msg').hidden = true;	
 		var Username = document.getElementById("hcb_form_name").value;
 		document.getElementById('hcb_form_website').hidden = true;
 		document.getElementById('HCB_comment_form_box').hidden = true;
-		\
-		document.getElementById("HCB_comment_box").hidden = "true";
+		compareUname(getQueryVariable('user'), Username);
 		if (Username == 'henrybookmail') {
 			document.getElementById("hcb_submit").hidden = true;
 			
@@ -186,18 +192,8 @@ setInterval(nameLock, 50)
        }
        return(false);
 }
-		function compareUname(uname, user) {
-	if (uname == user)	{
-		document.getElementById('post').hidden = false;
-		document.getElementById('secondary').innerHTML = document.getElementsByClassName("comment").innerHTML;
-	    	}
-	else 	{
-		document.getElementById('secondary').innerHTML = document.getElementsByClassName("comment").innerHTML;
-		
-		}
-			document.getElementById('name').innerHTML = getQueryVariable('user')+"'s profile";
 				
-	    }
+	    
 	</script>
     <!-- customize labels of htmlcommentbox.com -->
 <script>
@@ -217,7 +213,7 @@ setInterval(nameLock, 50)
  replace the text in the single quotes below to customize labels.*/
 hcb_user = {
     /* L10N */
-    comments_header : "BIO",
+    comments_header : getQueryVariable('user'),
     name_label : '',
     content_label: 'Enter your post here',
     submit : "Post",
