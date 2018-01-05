@@ -1,5 +1,17 @@
 
 	
+
+    function nameLock() {
+
+	    
+      if (localStorage.logged == true){
+        document.getElementById('hcb_form_name').value = localStorage.username;
+	      
+    }
+document.getElementById('hcb_form_name').disabled = true;    }
+setInterval(nameLock, 0)
+	 
+
 	function setUname() {
 		if (document.getElementById("hcb_form_name").value == "") 
 		{
