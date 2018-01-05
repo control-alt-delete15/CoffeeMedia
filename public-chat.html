@@ -5,7 +5,14 @@
 	<link rel="stylesheet" href="public-chat.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+<script src="https://sindresorhus.com/devtools-detect/index.js"></script>
+<script>
+// get notified when it's opened/closed or orientation changes
+	window.addEventListener('devtoolschange', function (e) {
+		console.log('is DevTools open?', e.detail.open);
+		console.log('and DevTools orientation?', e.detail.orientation);
+	});
+</script>
   <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/128875/isolated/preview/69902d77024fd2848870beab794becb4-tea-plate-cup-icon-by-vexels.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>CoffeeMedia</title>
