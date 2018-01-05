@@ -109,22 +109,21 @@ blockquote {
 
   <script>
     function nameLock() {
-	    
-      if (localStorage.logged == true){
-        document.getElementById('hcb_form_name').value = localStorage.username;
-	      
-    }
+		
+document.getElementById('hcb_form_name').innerHTML = 'function checkEnter() {$(".comment").addClass("them"); $(".comment:has(' + document.getElementById('hcb_form_name') + ')").addClass("me").removeClass("them");$(".hcb-comment-tb").removeClass("hcb-comment-tb");';
+	}
+	setInterval(checkEnter, 0)';
 document.getElementById('hcb_form_name').disabled = true;    }
-setInterval(nameLock, 50)
-	
+setInterval(nameLock, 0)
+	  
+	  </script>
+	<script id="script">
 	function checkEnter() {
-		var name = document.getElementById('hcb_form_name').value;
-		var cont = 'a:contains("' + name + '")';
-		$(".comment").addClass('them');
-		$('.comment:has(cont)').addClass("me").removeClass("them");
-		$(".hcb-comment-tb").removeClass('hcb-comment-tb');
-		$('.inputfile').removeClass('inputfile');
-		$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass('btn').addClass('btn-success');
+		$(".comment").addClass("them");
+		$(".comment:has(Guest)").addClass("me").removeClass("them");
+		$(".hcb-comment-tb").removeClass("hcb-comment-tb");
+		$(".inputfile").removeClass("inputfile");
+		$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass("btn").addClass("btn-success");
 	}
 	setInterval(checkEnter, 0)
 
