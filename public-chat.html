@@ -27,20 +27,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script>
 
-    function nameLock() {
-
-	    
-      if (localStorage.logged == true){
-        document.getElementById('hcb_form_name').value = localStorage.username;
-	      
-    }
-document.getElementById('hcb_form_name').disabled = true;    }
-setInterval(nameLock, 0)
-	 
-
-  </script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body onload="document.getElementById('hcb_form_name').hidden = true">
