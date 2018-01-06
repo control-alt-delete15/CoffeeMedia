@@ -109,18 +109,17 @@ blockquote {
 
   <script>
     function nameLock() {
-		
-document.getElementById('hcb_form_name').innerHTML = 'function checkEnter() {$(".comment").addClass("them"); $(".comment:has(' + document.getElementById('hcb_form_name') + ')").addClass("me").removeClass("them");$(".hcb-comment-tb").removeClass("hcb-comment-tb");';
-	}
-	setInterval(checkEnter, 0)';
+
+	
 document.getElementById('hcb_form_name').disabled = true;    }
 setInterval(nameLock, 0)
 	  
 	  </script>
 	<script id="script">
 	function checkEnter() {
+		var $name = $("#hcb_form_name").text()
 		$(".comment").addClass("them");
-		$(".comment:has(Guest)").addClass("me").removeClass("them");
+		$(".comment:contains('" + $name + "')").addClass("me").removeClass("them");
 		$(".hcb-comment-tb").removeClass("hcb-comment-tb");
 		$(".inputfile").removeClass("inputfile");
 		$( "label[for='hcb_file']" ).text( "Upload Image" ).addClass("btn").addClass("btn-success");
