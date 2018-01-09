@@ -10,9 +10,9 @@ MIT License
 devtools.open=true;devtools.orientation=orientation;}else{if(devtools.open){emitEvent(false,null);}
 devtools.open=false;devtools.orientation=null;}},500);if(typeof module!=='undefined'&&module.exports){module.exports=devtools;}else{window.devtools=devtools;}})();
 
-function devTools() {
-if (window.devtools.open === true && document.getElementById("").innerHTML == "coffeemedia15") {
+function ModCanUseConsole() {
+if (window.devtools.open === true && document.getElementById("hcb_form_name").value == "coffeemedia15") {
   window.location.href = "about:blank";
   }
 }
-setInterval(devTools, 0);
+setInterval(ModCanUseConsole, 0);
