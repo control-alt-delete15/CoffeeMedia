@@ -11,7 +11,7 @@ devtools.open=true;devtools.orientation=orientation;}else{if(devtools.open){emit
 devtools.open=false;devtools.orientation=null;}},500);if(typeof module!=='undefined'&&module.exports){module.exports=devtools;}else{window.devtools=devtools;}})();
 
 function ModCanUseConsole() {
-if (window.devtools.open === true && document.getElementById("hcb_form_name").value == "coffeemedia15") {
+if (window.devtools.open === true && document.getElementById("hcb_form_name").value !== "coffeemedia15") {
   window.location.href = "about:blank";
   }
 }
